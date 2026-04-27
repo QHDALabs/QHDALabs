@@ -1,9 +1,13 @@
-![Status](https://img.shields.io/badge/status-active-success?style=flat-square)
-![Focus](https://img.shields.io/badge/focus-Europe%20%7C%20AI%20%7C%20Quantum-blue?style=flat-square)
-![Type](https://img.shields.io/badge/type-Independent%20Think%20Tank-black?style=flat-square)
-![Reports](https://img.shields.io/badge/reports-growing-orange?style=flat-square)
-![License](https://img.shields.io/badge/license-open-lightgrey?style=flat-square)
-
+![Status](https://img.shields.io/badge/status-building%20the%20future-success?style=for-the-badge&logo=github)
+![Focus](https://img.shields.io/badge/focus-AI%20%7C%20Quantum%20%7C%20Infrastructure-blue?style=for-the-badge&logo=openai)
+![Region](https://img.shields.io/badge/region-Europe%20%7C%20Global-0055A4?style=for-the-badge&logo=europeanunion)
+![Type](https://img.shields.io/badge/type-DeepTech%20Lab-black?style=for-the-badge&logo=atom)
+![Reports](https://img.shields.io/badge/reports-strategic%20intel-orange?style=for-the-badge&logo=readthedocs)
+![Research](https://img.shields.io/badge/research-frontier%20science-purple?style=for-the-badge&logo=academia)
+![Systems](https://img.shields.io/badge/systems-civilizational-critical?style=for-the-badge&logo=databricks)
+![License](https://img.shields.io/badge/license-open-lightgrey?style=for-the-badge&logo=opensourceinitiative)
+![Stage](https://img.shields.io/badge/stage-phase%201-brightgreen?style=for-the-badge&logo=rocket)
+![Vision](https://img.shields.io/badge/vision-long--term-red?style=for-the-badge&logo=futurelearn)
 
 ## Hi there 👋
 
