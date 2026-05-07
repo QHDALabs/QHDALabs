@@ -5,7 +5,6 @@
 ![Reports](https://img.shields.io/badge/reports-strategic%20intel-orange?style=for-the-badge&logo=readthedocs)
 ![Research](https://img.shields.io/badge/research-frontier%20science-purple?style=for-the-badge&logo=academia)
 ![Systems](https://img.shields.io/badge/systems-civilizational-critical?style=for-the-badge&logo=databricks)
-![License](https://img.shields.io/badge/license-open-lightgrey?style=for-the-badge&logo=opensourceinitiative)
 ![Stage](https://img.shields.io/badge/stage-phase%201-brightgreen?style=for-the-badge&logo=rocket)
 ![Vision](https://img.shields.io/badge/vision-long--term-red?style=for-the-badge&logo=futurelearn)
 
