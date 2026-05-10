@@ -145,4 +145,3 @@ This is only the beginning.
 ## Connect
 
 GitHub is the first public node of QHDALabs. More systems, research, and initiatives will follow.
-mailto:qhdalabs.contact@gmail.com
