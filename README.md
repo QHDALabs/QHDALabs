@@ -108,6 +108,17 @@ Inside you may find:
 
 ---
 
+## Public Workspace & Digital Garden
+
+Explore the ongoing research, thoughts, and technical documentation of QHDALabs:
+
+- [Technical Blog](./digital-garden/blog/) — Deep dives, essays, and long-form articles.
+- [R&D & Research Notes](./digital-garden/research/) — Quantum computing (Qiskit), Relational Time theories, and Energy systems.
+- [Knowledge Base & Opinions](./digital-garden/notes/) — Practical notes on automation, ISO 27001, and perspectives on AGI partnership.
+- [Latest News](./digital-garden/news/) — Project status updates and milestones.
+
+---
+
 ## Long-Term Goals
 
 - Build globally relevant deep-tech IP  
