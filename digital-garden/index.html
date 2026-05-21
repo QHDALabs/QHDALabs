@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QHDALabs // Quantum-AI Genesis Node</title>
-    <!-- Tailwind CSS for modern fluid styling -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome for technical, cosmic, and geometric icons -->
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Orbitron for tech, Cinzel for ancient/ethnic mythic touch, Space Grotesk for content -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;400;600;700&family=Fira+Code:wght@300;500&display=swap" rel="stylesheet">
+    <!-- Marked.js for fast Markdown parsing in browser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     
     <script>
         tailwind.config = {
@@ -41,19 +43,18 @@
     </script>
     <style>
         .glass-panel {
-            background: rgba(3, 7, 18, 0.75);
+            background: rgba(3, 7, 18, 0.85);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(6, 182, 212, 0.15);
         }
         .glow-cyan:hover {
-            box-shadow: 0 0 25px rgba(6, 182, 212, 0.4);
-            border-color: rgba(6, 182, 212, 0.6);
+            box-shadow: 0 0 25px rgba(6, 182, 212, 0.3);
+            border-color: rgba(6, 182, 212, 0.5);
         }
         .glow-amber:hover {
-            box-shadow: 0 0 25px rgba(245, 158, 11, 0.4);
-            border-color: rgba(245, 158, 11, 0.6);
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.3);
+            border-color: rgba(245, 158, 11, 0.5);
         }
-        /* Native scrollbar styling for technical dashboard feel */
         ::-webkit-scrollbar {
             width: 6px;
         }
@@ -74,6 +75,19 @@
         .pulse-layer {
             animation: pulse-slow 8s infinite ease-in-out;
         }
+        /* Custom typography styling inside the dynamically parsed Markdown viewer */
+        .markdown-content h1 { font-family: 'Cinzel', serif; font-size: 2rem; font-weight: bold; margin-bottom: 1.5rem; color: #f59e0b; border-bottom: 1px solid rgba(245, 158, 11, 0.2); padding-bottom: 0.5rem; }
+        .markdown-content h2 { font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: bold; margin-top: 1.5rem; margin-bottom: 1rem; color: #06b6d4; }
+        .markdown-content h3 { font-family: 'Orbitron', sans-serif; font-size: 1.1rem; margin-top: 1rem; color: #a78bfa; }
+        .markdown-content p { font-family: 'Space Grotesk', sans-serif; font-size: 1rem; margin-bottom: 1.25rem; color: #cbd5e1; line-height: 1.75; }
+        .markdown-content ul { list-style-type: square; margin-left: 1.5rem; margin-bottom: 1.25rem; }
+        .markdown-content li { margin-bottom: 0.5rem; font-family: 'Space Grotesk', sans-serif; color: #e2e8f0; }
+        .markdown-content pre { background: #020617; padding: 1.25rem; border-radius: 0.5rem; border: 1px solid rgba(6, 182, 212, 0.2); overflow-x: auto; font-family: 'Fira Code', monospace; margin-bottom: 1.5rem; font-size: 0.85rem; }
+        .markdown-content code { font-family: 'Fira Code', monospace; background: rgba(6, 182, 212, 0.1); padding: 0.2rem 0.4rem; border-radius: 0.25rem; color: #22d3ee; }
+        .markdown-content blockquote { border-left: 4px solid #f59e0b; padding-left: 1rem; font-style: italic; color: #94a3b8; margin-bottom: 1.5rem; }
+        .markdown-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: 0.9rem; }
+        .markdown-content th { background: rgba(30, 27, 75, 0.5); border: 1px solid rgba(6, 182, 212, 0.15); padding: 0.75rem; text-align: left; color: #06b6d4; font-family: 'Orbitron', sans-serif; }
+        .markdown-content td { border: 1px solid rgba(6, 182, 212, 0.1); padding: 0.75rem; color: #cbd5e1; }
     </style>
 </head>
 <body class="bg-cyber-obsidian text-slate-100 font-sans min-h-screen relative overflow-x-hidden selection:bg-cyan-500/30 selection:text-cyan-300">
@@ -81,36 +95,31 @@
     <!-- Quantum Background Canvas -->
     <canvas id="quantumCanvas" class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none opacity-40"></canvas>
     
-    <!-- Tribal / Sacred Geometry Cosmic Layer -->
+    <!-- Tribal Sacred Geometry Cosmic Layer -->
     <div class="fixed inset-0 pointer-events-none -z-20 opacity-10 mix-blend-color-dodge pulse-layer flex items-center justify-center">
-        <!-- Stylized ancient mandala motif representing both neural net & tribal sun -->
         <svg class="w-[80vw] h-[80vw] max-w-[800px] max-h-[800px] text-cyber-gold" viewBox="0 0 200 200" fill="none" stroke="currentColor">
             <circle cx="100" cy="100" r="90" stroke-width="0.5" stroke-dasharray="2,2"/>
             <circle cx="100" cy="100" r="60" stroke-width="0.5"/>
             <circle cx="100" cy="100" r="30" stroke-width="1"/>
             <path d="M 100,10 L 100,190 M 10,100 L 190,100 M 36.36,36.36 L 163.64,163.64 M 36.36,163.64 L 163.64,36.36" stroke-width="0.25"/>
-            <!-- Tribal star patterns -->
             <polygon points="100,40 115,85 160,100 115,115 100,160 85,115 40,100 85,85" stroke-width="0.5"/>
-            <polygon points="100,60 110,90 140,100 110,110 100,140 90,110 60,100 90,90" stroke-width="0.25" stroke-dasharray="1,1"/>
         </svg>
     </div>
 
+    <!-- Header -->
     <header class="border-b border-cyan-950 bg-black/50 backdrop-blur-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-4">
-                <!-- Ethno-Quantum Logo -->
-                <div class="relative w-12 h-12 flex items-center justify-center group">
+                <div class="relative w-12 h-12 flex items-center justify-center group cursor-pointer" onclick="closeArticleViewer()">
                     <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500 to-amber-500 rounded-lg opacity-30 blur-sm group-hover:opacity-75 transition-opacity"></div>
                     <svg class="w-10 h-10 text-cyan-400 group-hover:rotate-180 transition-transform duration-1000" viewBox="0 0 100 100" fill="none" stroke="currentColor">
-                        <!-- Bloch sphere representation with tribal accents -->
                         <circle cx="50" cy="50" r="40" stroke-width="1.5" />
                         <ellipse cx="50" cy="50" rx="40" ry="15" stroke-width="1" stroke-dasharray="3,3" />
                         <line x1="50" y1="10" x2="50" y2="90" stroke-width="1" />
-                        <line x1="10" y1="50" x2="90" y2="50" stroke-width="1" />
                         <polygon points="50,20 55,35 70,50 55,65 50,80 45,65 30,50 45,35" stroke-width="1" fill="rgba(245, 158, 11, 0.2)"/>
                     </svg>
                 </div>
-                <div>
+                <div class="cursor-pointer" onclick="closeArticleViewer()">
                     <span class="font-cinzel text-xl font-bold tracking-[0.2em] text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-slate-100 to-amber-500">QHDALabs</span>
                     <span class="block text-[9px] font-mono uppercase tracking-[0.3em] text-cyan-500/80">Quantum AI Genesis Node</span>
                 </div>
@@ -118,335 +127,340 @@
             
             <nav class="hidden md:flex space-x-6 text-sm font-mono tracking-wider">
                 <a href="https://github.com/QHDALabs/QHDALabs" target="_blank" class="text-slate-400 hover:text-cyan-400 transition-colors"><i class="fab fa-github mr-2"></i>Primary Node</a>
-                <a href="#garden" class="text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-seedling mr-2"></i>Garden</a>
-                <a href="#telemetry" class="text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-microchip mr-2"></i>Telemetry</a>
-                <a href="#ecosystem" class="text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-network-wired mr-2"></i>Ecosystem</a>
+                <a href="#garden" onclick="closeArticleViewer()" class="text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-seedling mr-2"></i>Garden</a>
+                <a href="#telemetry" onclick="closeArticleViewer()" class="text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-microchip mr-2"></i>Telemetry</a>
+                <a href="#ecosystem" onclick="closeArticleViewer()" class="text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-network-wired mr-2"></i>Ecosystem</a>
             </nav>
         </div>
     </header>
 
+    <!-- Main Content Dynamic Container -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 relative">
 
-        <!-- Hero Section -->
-        <section class="text-center py-12 md:py-20 relative">
-            <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute -top-10 left-1/3 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
-
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-950/20 text-xs font-mono tracking-widest text-cyan-400 mb-6 uppercase">
-                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
-                <span>Active Genesis Protocol Initiated</span>
-            </div>
-
-            <h1 class="font-cinzel text-4xl md:text-7xl font-extrabold tracking-wide mb-6 leading-tight">
-                THINK <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-200">DEEP</span>.<br class="block md:hidden"> 
-                BUILD <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">BOLD</span>.<br>
-                SCALE <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-200">CIVILIZATIONS</span>.
-            </h1>
-
-            <p class="font-sans text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
-                An independent deep-tech initiative operating at the extreme convergence of 
-                <span class="text-cyan-300 font-medium">quantum science</span>, 
-                <span class="text-purple-300 font-medium">autonomous intelligence</span>, 
-                and <span class="text-amber-400 font-medium">primordial cosmic geometries</span>.
-            </p>
-
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="#garden" class="px-8 py-4 w-full sm:w-auto rounded-lg bg-gradient-to-r from-cyan-600 to-cyan-800 text-white font-mono tracking-wider font-semibold transition-transform active:scale-95 hover:shadow-lg hover:shadow-cyan-500/20 text-center">
-                    ENTER DIGITAL GARDEN <i class="fa-solid fa-arrow-right ml-2"></i>
-                </a>
-                <a href="https://github.com/QHDALabs" target="_blank" class="px-8 py-4 w-full sm:w-auto rounded-lg border border-slate-700 hover:border-slate-500 bg-slate-900/40 hover:bg-slate-900/80 font-mono tracking-wider text-slate-300 transition-all text-center">
-                    EXPLORER REPOSITORIES <i class="fab fa-github ml-2"></i>
-                </a>
-            </div>
-        </section>
-
-        <!-- Interactive Section: Quantum Mandala Tuner -->
-        <section class="mb-16">
-            <div class="glass-panel rounded-2xl p-6 md:p-10 border border-cyan-500/20 relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-4 font-mono text-[9px] text-cyan-500/50">WIDGET-ID: QHDA-TUNE-01</div>
+        <!-- Dynamic Article Viewer Panel (Hidden by default, overlays hero) -->
+        <section id="articleViewer" class="hidden min-h-screen py-10 transition-all duration-500 ease-in-out">
+            <div class="glass-panel rounded-2xl p-6 md:p-12 border border-amber-500/20 max-w-4xl mx-auto shadow-2xl relative">
                 
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div class="lg:col-span-5 space-y-6">
-                        <div class="flex items-center space-x-3 text-amber-500 font-mono">
-                            <i class="fa-solid fa-sliders text-xl"></i>
-                            <span class="uppercase tracking-widest text-sm">Interactive Archetype Tuner</span>
-                        </div>
-                        <h2 class="font-cinzel text-2xl md:text-3xl font-bold tracking-wider">Align Ancestral Geometries with Quantum Logic</h2>
-                        <p class="text-slate-400 text-sm md:text-base leading-relaxed">
-                            Interact with the visualizer to tune the alignment of the <strong>QHDALabs Coherence Grid</strong>. Modulating this interface simulates the transition from chaotic state entropy into highly structured quantum lattices.
-                        </p>
-                        
-                        <!-- Interactive Controls -->
-                        <div class="space-y-4 pt-4 border-t border-slate-800 font-mono text-xs">
-                            <div>
-                                <div class="flex justify-between text-slate-400 mb-2">
-                                    <span>COHERENCE FOCUS (AI NODE)</span>
-                                    <span id="focusVal" class="text-cyan-400">5</span>
-                                </div>
-                                <input type="range" id="tuningFocus" min="1" max="10" value="5" class="w-full accent-cyan-400 bg-slate-800 rounded-lg appearance-none h-2">
-                            </div>
-                            <div>
-                                <div class="flex justify-between text-slate-400 mb-2">
-                                    <span>TRIBAL SYMMETRY PATTERNS</span>
-                                    <span id="symmetryVal" class="text-amber-400">8</span>
-                                </div>
-                                <input type="range" id="tuningSymmetry" min="4" max="16" value="8" class="w-full accent-amber-500 bg-slate-800 rounded-lg appearance-none h-2">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- SVG Mandala Display -->
-                    <div class="lg:col-span-7 flex flex-col items-center justify-center">
-                        <div class="relative w-64 h-64 md:w-80 md:h-80 bg-slate-950/80 rounded-full flex items-center justify-center border border-cyan-500/10 shadow-inner">
-                            <div class="absolute inset-0 bg-radial-gradient from-transparent to-cyan-500/5 rounded-full"></div>
-                            <svg id="interactiveMandala" class="w-56 h-56 md:w-72 md:h-72 text-cyan-400 transition-all duration-300" viewBox="0 0 100 100">
-                                <!-- Generated Dynamically by JS -->
-                            </svg>
-                        </div>
-                        <span class="text-[10px] font-mono text-slate-500 uppercase tracking-widest mt-4">Simulated Quantum State Vector Alignment</span>
-                    </div>
+                <!-- Close and navigation controls -->
+                <div class="flex justify-between items-center mb-8 pb-4 border-b border-slate-800">
+                    <button onclick="closeArticleViewer()" class="px-4 py-2 bg-slate-900 border border-slate-700 hover:border-cyan-500/50 text-slate-300 hover:text-cyan-400 transition-all rounded font-mono text-xs flex items-center">
+                        <i class="fa-solid fa-chevron-left mr-2"></i> Return to Main Grid
+                    </button>
+                    <span id="articleMetaCategory" class="text-xs font-mono px-3 py-1 rounded bg-amber-500/10 text-amber-500 border border-amber-500/20 uppercase tracking-widest">Research Note</span>
                 </div>
+
+                <!-- Live Dynamic Loaded Target Markdown -->
+                <article class="markdown-content" id="markdownOutput">
+                    <!-- Loaded dynamically via Fetch API and parsed by Marked.js -->
+                    <div class="flex flex-col items-center justify-center py-20">
+                        <i class="fa-solid fa-yin-yang animate-spin text-4xl text-cyan-400 mb-4"></i>
+                        <span class="font-mono text-xs text-slate-400">LOADING HOLOTAPE SEQUENCES...</span>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <!-- Digital Garden Hub Section -->
-        <section id="garden" class="scroll-mt-24 mb-16">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
-                <div>
-                    <div class="text-cyan-400 font-mono text-xs tracking-widest uppercase mb-2">// Public Knowledge Garden</div>
-                    <h2 class="font-cinzel text-3xl md:text-4xl font-extrabold tracking-wider">The Digital Garden Node</h2>
+        <!-- Standard Main Landing Section Wrapper -->
+        <div id="mainLandingContent" class="space-y-16">
+            
+            <!-- Hero Section -->
+            <section class="text-center py-12 md:py-20 relative">
+                <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -top-10 left-1/3 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-950/20 text-xs font-mono tracking-widest text-cyan-400 mb-6 uppercase">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+                    <span>System Online // Dynamic Index Enabled</span>
                 </div>
-                <p class="text-slate-400 text-sm font-mono max-w-md mt-4 md:mt-0">
-                    A multi-dimensional repository containing unfiltered scientific frameworks, raw intelligence notes, and strategic insights.
+
+                <h1 class="font-cinzel text-4xl md:text-7xl font-extrabold tracking-wide mb-6 leading-tight">
+                    THINK <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-200">DEEP</span>.<br class="block md:hidden"> 
+                    BUILD <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">BOLD</span>.<br>
+                    SCALE <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-200">CIVILIZATIONS</span>.
+                </h1>
+
+                <p class="font-sans text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+                    An independent deep-tech initiative operating at the extreme convergence of 
+                    <span class="text-cyan-300 font-medium">quantum science</span>, 
+                    <span class="text-purple-300 font-medium">autonomous intelligence</span>, 
+                    and <span class="text-amber-400 font-medium">primordial cosmic geometries</span>.
                 </p>
-            </div>
 
-            <!-- Garden Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-                <!-- Card 1: Blog -->
-                <a href="https://github.com/QHDALabs/QHDALabs/tree/main/digital-garden/blog" class="glass-panel glow-cyan p-6 md:p-8 rounded-xl transition-all duration-300 relative group flex flex-col justify-between min-h-[250px]">
-                    <div class="absolute top-0 right-0 bg-cyan-950/40 text-cyan-400 border-l border-b border-cyan-800/30 px-3 py-1 text-[10px] font-mono tracking-widest rounded-bl-lg uppercase">
-                        Deep-dives / Essays
-                    </div>
-                    <div>
-                        <div class="w-12 h-12 rounded-lg bg-cyan-950/50 flex items-center justify-center text-cyan-400 mb-6 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-feather-pointed text-xl"></i>
-                        </div>
-                        <h3 class="font-cinzel text-xl font-bold mb-3 tracking-wide text-slate-100 group-hover:text-cyan-300 transition-colors">Technical Blog</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">
-                            Structured, long-form essays outlining global-scale infrastructure integration, high-risk security models, and long-horizon space narratives.
-                        </p>
-                    </div>
-                    <div class="mt-6 flex items-center text-xs font-mono text-cyan-400 group-hover:translate-x-2 transition-transform">
-                        EXPLORE WRITINGS <i class="fa-solid fa-arrow-right-long ml-2"></i>
-                    </div>
-                </a>
-
-                <!-- Card 2: Research -->
-                <a href="https://github.com/QHDALabs/QHDALabs/tree/main/digital-garden/research" class="glass-panel glow-amber p-6 md:p-8 rounded-xl transition-all duration-300 relative group flex flex-col justify-between min-h-[250px]">
-                    <div class="absolute top-0 right-0 bg-amber-950/40 text-amber-500 border-l border-b border-amber-800/30 px-3 py-1 text-[10px] font-mono tracking-widest rounded-bl-lg uppercase">
-                        Frontier Science
-                    </div>
-                    <div>
-                        <div class="w-12 h-12 rounded-lg bg-amber-950/50 flex items-center justify-center text-amber-500 mb-6 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-atom text-xl"></i>
-                        </div>
-                        <h3 class="font-cinzel text-xl font-bold mb-3 tracking-wide text-slate-100 group-hover:text-amber-400 transition-colors">R&D & Research Notes</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">
-                            Complex, physics-heavy writeups on Causal Set Cosmology, Relational Time mechanisms, and open implementation blueprints in quantum computing.
-                        </p>
-                    </div>
-                    <div class="mt-6 flex items-center text-xs font-mono text-amber-400 group-hover:translate-x-2 transition-transform">
-                        DECRYPTION PROTOCOLS <i class="fa-solid fa-arrow-right-long ml-2"></i>
-                    </div>
-                </a>
-
-                <!-- Card 3: Notes -->
-                <a href="https://github.com/QHDALabs/QHDALabs/tree/main/digital-garden/notes" class="glass-panel glow-cyan p-6 md:p-8 rounded-xl transition-all duration-300 relative group flex flex-col justify-between min-h-[250px]">
-                    <div class="absolute top-0 right-0 bg-cyan-950/40 text-cyan-400 border-l border-b border-cyan-800/30 px-3 py-1 text-[10px] font-mono tracking-widest rounded-bl-lg uppercase">
-                        Knowledge Base
-                    </div>
-                    <div>
-                        <div class="w-12 h-12 rounded-lg bg-cyan-950/50 flex items-center justify-center text-cyan-400 mb-6 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-brain text-xl"></i>
-                        </div>
-                        <h3 class="font-cinzel text-xl font-bold mb-3 tracking-wide text-slate-100 group-hover:text-cyan-300 transition-colors">Raw Musings & Opinions</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">
-                            Zettelkasten-style entries featuring cybernetic governance theories, security policies like ISO 27001, and cooperative AGI alignment structures.
-                        </p>
-                    </div>
-                    <div class="mt-6 flex items-center text-xs font-mono text-cyan-400 group-hover:translate-x-2 transition-transform">
-                        ACCESS KNOWLEDGE MAP <i class="fa-solid fa-arrow-right-long ml-2"></i>
-                    </div>
-                </a>
-
-                <!-- Card 4: News -->
-                <a href="https://github.com/QHDALabs/QHDALabs/tree/main/digital-garden/news" class="glass-panel glow-amber p-6 md:p-8 rounded-xl transition-all duration-300 relative group flex flex-col justify-between min-h-[250px]">
-                    <div class="absolute top-0 right-0 bg-amber-950/40 text-amber-500 border-l border-b border-amber-800/30 px-3 py-1 text-[10px] font-mono tracking-widest rounded-bl-lg uppercase">
-                        Ecosystem Status
-                    </div>
-                    <div>
-                        <div class="w-12 h-12 rounded-lg bg-amber-950/50 flex items-center justify-center text-amber-500 mb-6 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-bullhorn text-xl"></i>
-                        </div>
-                        <h3 class="font-cinzel text-xl font-bold mb-3 tracking-wide text-slate-100 group-hover:text-amber-400 transition-colors">Latest News</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">
-                            Continuous updates about the lab's breakthroughs, active code commits, status logs, and new repository initializations within the ecosystem.
-                        </p>
-                    </div>
-                    <div class="mt-6 flex items-center text-xs font-mono text-amber-400 group-hover:translate-x-2 transition-transform">
-                        READ CURRENT LOGS <i class="fa-solid fa-arrow-right-long ml-2"></i>
-                    </div>
-                </a>
-
-            </div>
-        </section>
-
-        <!-- Live Telemetry / News Section -->
-        <section id="telemetry" class="scroll-mt-24 mb-16">
-            <div class="glass-panel rounded-2xl border border-cyan-500/20 overflow-hidden shadow-2xl">
-                <!-- Terminal Header Bar -->
-                <div class="bg-slate-950/90 border-b border-slate-800 px-4 py-3 flex items-center justify-between">
-                    <div class="flex items-center space-x-2">
-                        <span class="w-3 h-3 rounded-full bg-red-500"></span>
-                        <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
-                        <span class="w-3 h-3 rounded-full bg-green-500"></span>
-                        <span class="text-xs font-mono text-slate-400 ml-2">qhda-terminal@systems:~</span>
-                    </div>
-                    <div class="flex items-center space-x-4 text-xs font-mono">
-                        <span class="text-cyan-400 uppercase tracking-widest text-[10px]"><i class="fa-solid fa-pulse animate-pulse mr-1"></i> Connected to Mainframe</span>
-                    </div>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#garden" class="px-8 py-4 w-full sm:w-auto rounded-lg bg-gradient-to-r from-cyan-600 to-cyan-800 text-white font-mono tracking-wider font-semibold transition-transform active:scale-95 hover:shadow-lg hover:shadow-cyan-500/20 text-center">
+                        ENTER DIGITAL GARDEN <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
                 </div>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-12">
-                    <!-- Left Column: Dynamic telemetry log -->
-                    <div class="lg:col-span-8 p-6 bg-black/95 font-mono text-xs text-green-400/90 space-y-4 h-[350px] overflow-y-auto" id="terminalOutput">
-                        <!-- Simulated system logs generated dynamically inside JS -->
-                        <div>[SYS_INIT] QHDALabs Genesis mainframe starting...</div>
-                        <div>[NODE_SYS] Connection established with IPFS cluster nodes.</div>
-                        <div>[SUCCESS] Quantum Coherence Vector set to state: SUPERPOSITION.</div>
-                    </div>
+            </section>
+
+            <!-- Interactive Section: Quantum Mandala Tuner -->
+            <section class="mb-16">
+                <div class="glass-panel rounded-2xl p-6 md:p-10 border border-cyan-500/20 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 font-mono text-[9px] text-cyan-500/50">WIDGET-ID: QHDA-TUNE-01</div>
                     
-                    <!-- Right Column: Interactive control & News summary -->
-                    <div class="lg:col-span-4 p-6 bg-slate-900/60 border-t lg:border-t-0 lg:border-l border-slate-800 flex flex-col justify-between">
-                        <div>
-                            <span class="text-amber-500 font-mono text-xs uppercase tracking-widest block mb-2">// Global Controls</span>
-                            <h3 class="font-cinzel text-lg font-bold mb-4">Command Terminal</h3>
-                            <p class="text-slate-400 text-xs leading-relaxed mb-6">
-                                Command the Genesis simulation directly. Triggering protocols updates telemetry datasets on-the-fly, generating new topological paths.
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-5 space-y-6">
+                            <div class="flex items-center space-x-3 text-amber-500 font-mono">
+                                <i class="fa-solid fa-sliders text-xl"></i>
+                                <span class="uppercase tracking-widest text-sm">Interactive Archetype Tuner</span>
+                            </div>
+                            <h2 class="font-cinzel text-2xl md:text-3xl font-bold tracking-wider">Align Ancestral Geometries with Quantum Logic</h2>
+                            <p class="text-slate-400 text-sm md:text-base leading-relaxed">
+                                Interact with the visualizer to tune the alignment of the <strong>QHDALabs Coherence Grid</strong>. Modulating this interface simulates the transition from chaotic state entropy into highly structured quantum lattices.
                             </p>
+                            
+                            <div class="space-y-4 pt-4 border-t border-slate-800 font-mono text-xs">
+                                <div>
+                                    <div class="flex justify-between text-slate-400 mb-2">
+                                        <span>COHERENCE FOCUS (AI NODE)</span>
+                                        <span id="focusVal" class="text-cyan-400">5</span>
+                                    </div>
+                                    <input type="range" id="tuningFocus" min="1" max="10" value="5" class="w-full accent-cyan-400 bg-slate-800 rounded-lg appearance-none h-2">
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-slate-400 mb-2">
+                                        <span>TRIBAL SYMMETRY PATTERNS</span>
+                                        <span id="symmetryVal" class="text-amber-400">8</span>
+                                    </div>
+                                    <input type="range" id="tuningSymmetry" min="4" max="16" value="8" class="w-full accent-amber-500 bg-slate-800 rounded-lg appearance-none h-2">
+                                </div>
+                            </div>
                         </div>
                         
-                        <div class="space-y-3">
-                            <button id="btnGenesis" class="w-full text-left p-3 rounded bg-cyan-950/30 hover:bg-cyan-950/75 border border-cyan-500/20 text-xs font-mono text-cyan-300 transition-all flex items-center justify-between">
-                                <span><i class="fa-solid fa-code-commit mr-2"></i>Trigger Genesis Signal</span>
-                                <i class="fa-solid fa-terminal text-[10px]"></i>
-                            </button>
-                            <button id="btnMetrics" class="w-full text-left p-3 rounded bg-amber-950/30 hover:bg-amber-950/75 border border-amber-500/20 text-xs font-mono text-amber-300 transition-all flex items-center justify-between">
-                                <span><i class="fa-solid fa-chart-line mr-2"></i>Dump Telemetry Metrics</span>
-                                <i class="fa-solid fa-terminal text-[10px]"></i>
-                            </button>
-                            <button id="btnWipe" class="w-full text-left p-3 rounded bg-slate-800/50 hover:bg-slate-800 border border-slate-700 text-xs font-mono text-slate-300 transition-all flex items-center justify-between">
-                                <span><i class="fa-solid fa-eraser mr-2"></i>Clear Screen Buffer</span>
-                                <i class="fa-solid fa-terminal text-[10px]"></i>
-                            </button>
+                        <!-- SVG Mandala Display -->
+                        <div class="lg:col-span-7 flex flex-col items-center justify-center">
+                            <div class="relative w-64 h-64 md:w-80 md:h-80 bg-slate-950/80 rounded-full flex items-center justify-center border border-cyan-500/10 shadow-inner">
+                                <div class="absolute inset-0 bg-radial-gradient from-transparent to-cyan-500/5 rounded-full"></div>
+                                <svg id="interactiveMandala" class="w-56 h-56 md:w-72 md:h-72 text-cyan-400 transition-all duration-300" viewBox="0 0 100 100">
+                                    <!-- Dynamic elements from JS -->
+                                </svg>
+                            </div>
+                            <span class="text-[10px] font-mono text-slate-500 uppercase tracking-widest mt-4">Simulated Quantum State Vector Alignment</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Ecosystem Repositories Registry -->
-        <section id="ecosystem" class="scroll-mt-24 mb-16">
-            <div class="text-center mb-10">
-                <div class="text-cyan-400 font-mono text-xs tracking-widest uppercase mb-2">// Interlinked Systems</div>
-                <h2 class="font-cinzel text-3xl md:text-4xl font-extrabold tracking-wider">Ecosystem Repositories</h2>
-                <p class="text-slate-400 text-sm max-w-xl mx-auto mt-3">
-                    A list of live public domains under active orchestration in the QHDALabs digital space.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- Repo 1: Genesis Protocol -->
-                <div class="glass-panel p-5 rounded-xl border border-cyan-500/10 hover:border-cyan-500/30 transition-all relative">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="bg-cyan-500/10 text-cyan-400 text-[10px] font-mono px-2 py-1 rounded">JavaScript / HSM</span>
-                        <a href="https://github.com/QHDALabs/QHDALabs-Genesis-Protocol" target="_blank" class="text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-up-right-from-square"></i></a>
+            <!-- Dynamic Digital Garden Hub Section -->
+            <section id="garden" class="scroll-mt-24 mb-16">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+                    <div>
+                        <div class="text-cyan-400 font-mono text-xs tracking-widest uppercase mb-2">// Public Knowledge Garden</div>
+                        <h2 class="font-cinzel text-3xl md:text-4xl font-extrabold tracking-wider">The Digital Garden Node</h2>
                     </div>
-                    <h3 class="font-mono text-base font-bold mb-2 text-slate-100">QHDALabs-Genesis-Protocol</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed mb-4">
-                        Ethical crowdsourcing platform defining core AI "Golden Rule" sets mapped to dedicated Quantum Hardware Security Modules (Q-HSM).
+                    <p class="text-slate-400 text-sm font-mono max-w-md mt-4 md:mt-0">
+                        Select a category to scan available neural transcripts, research notes, and status reports directly within the UI node.
                     </p>
                 </div>
 
-                <!-- Repo 2: Universe -->
-                <div class="glass-panel p-5 rounded-xl border border-cyan-500/10 hover:border-cyan-500/30 transition-all relative">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="bg-amber-500/10 text-amber-500 text-[10px] font-mono px-2 py-1 rounded">Python / Cosmology</span>
-                        <a href="https://github.com/QHDALabs/QHDALabs-Universe" target="_blank" class="text-slate-400 hover:text-amber-500 transition-colors"><i class="fa-solid fa-up-right-from-square"></i></a>
+                <!-- Main dynamic listings inside grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- Blog Card -->
+                    <div class="glass-panel p-6 rounded-xl border border-cyan-500/15 flex flex-col justify-between h-[380px]">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-[10px] font-mono tracking-widest text-cyan-400 uppercase bg-cyan-950/40 border border-cyan-800/30 px-2 py-1 rounded">ESSAYS & ESSENCE</span>
+                                <i class="fa-solid fa-feather-pointed text-cyan-400 text-lg"></i>
+                            </div>
+                            <h3 class="font-cinzel text-xl font-bold mb-4 tracking-wide text-slate-100">Technical Blog</h3>
+                            <!-- Dynamic Content Inject Area -->
+                            <div class="space-y-3 max-h-[200px] overflow-y-auto pr-2" id="list-blog">
+                                <div class="text-xs text-slate-500 font-mono animate-pulse">Initializing directory indexes...</div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="font-mono text-base font-bold mb-2 text-slate-100">QHDALabs-Universe</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed mb-4">
-                        Global high-precision cosmology modeling utilizing Causal Set theories, emergent network states, and quantum geometric mechanics.
+
+                    <!-- Research Card -->
+                    <div class="glass-panel p-6 rounded-xl border border-amber-500/15 flex flex-col justify-between h-[380px]">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-[10px] font-mono tracking-widest text-amber-500 uppercase bg-amber-950/40 border border-amber-800/30 px-2 py-1 rounded">FRONTIER SCIENCE</span>
+                                <i class="fa-solid fa-atom text-amber-400 text-lg"></i>
+                            </div>
+                            <h3 class="font-cinzel text-xl font-bold mb-4 tracking-wide text-slate-100">R&D & Research Notes</h3>
+                            <!-- Dynamic Content Inject Area -->
+                            <div class="space-y-3 max-h-[200px] overflow-y-auto pr-2" id="list-research">
+                                <div class="text-xs text-slate-500 font-mono animate-pulse">Initializing directory indexes...</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notes Card -->
+                    <div class="glass-panel p-6 rounded-xl border border-purple-500/15 flex flex-col justify-between h-[380px]">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-[10px] font-mono tracking-widest text-purple-400 uppercase bg-purple-950/40 border border-purple-800/30 px-2 py-1 rounded">KNOWLEDGE BASE</span>
+                                <i class="fa-solid fa-brain text-purple-400 text-lg"></i>
+                            </div>
+                            <h3 class="font-cinzel text-xl font-bold mb-4 tracking-wide text-slate-100">Raw Musings & Opinions</h3>
+                            <!-- Dynamic Content Inject Area -->
+                            <div class="space-y-3 max-h-[200px] overflow-y-auto pr-2" id="list-notes">
+                                <div class="text-xs text-slate-500 font-mono animate-pulse">Initializing directory indexes...</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Card -->
+                    <div class="glass-panel p-6 rounded-xl border border-rose-500/15 flex flex-col justify-between h-[380px]">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-[10px] font-mono tracking-widest text-rose-400 uppercase bg-rose-950/40 border border-rose-800/30 px-2 py-1 rounded">ECOSYSTEM TELEMETRY</span>
+                                <i class="fa-solid fa-bullhorn text-rose-400 text-lg"></i>
+                            </div>
+                            <h3 class="font-cinzel text-xl font-bold mb-4 tracking-wide text-slate-100">Latest News & Releases</h3>
+                            <!-- Dynamic Content Inject Area -->
+                            <div class="space-y-3 max-h-[200px] overflow-y-auto pr-2" id="list-news">
+                                <div class="text-xs text-slate-500 font-mono animate-pulse">Initializing directory indexes...</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Live Telemetry Terminal -->
+            <section id="telemetry" class="scroll-mt-24 mb-16">
+                <div class="glass-panel rounded-2xl border border-cyan-500/20 overflow-hidden shadow-2xl">
+                    <div class="bg-slate-950/90 border-b border-slate-800 px-4 py-3 flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                            <span class="text-xs font-mono text-slate-400 ml-2">qhda-terminal@systems:~</span>
+                        </div>
+                        <div class="flex items-center space-x-4 text-xs font-mono">
+                            <span class="text-cyan-400 uppercase tracking-widest text-[10px]"><i class="fa-solid fa-pulse animate-pulse mr-1"></i> Connected to Mainframe</span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-12">
+                        <div class="lg:col-span-8 p-6 bg-black/95 font-mono text-xs text-green-400/90 space-y-4 h-[350px] overflow-y-auto" id="terminalOutput">
+                            <div>[SYS_INIT] QHDALabs Genesis mainframe starting...</div>
+                            <div>[NODE_SYS] Connection established with IPFS cluster nodes.</div>
+                            <div>[SUCCESS] Quantum Coherence Vector set to state: SUPERPOSITION.</div>
+                        </div>
+                        
+                        <div class="lg:col-span-4 p-6 bg-slate-900/60 border-t lg:border-t-0 lg:border-l border-slate-800 flex flex-col justify-between">
+                            <div>
+                                <span class="text-amber-500 font-mono text-xs uppercase tracking-widest block mb-2">// Global Controls</span>
+                                <h3 class="font-cinzel text-lg font-bold mb-4">Command Terminal</h3>
+                                <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                                    Command the Genesis simulation directly. Triggering protocols updates telemetry datasets on-the-fly, generating new topological paths.
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3">
+                                <button id="btnGenesis" class="w-full text-left p-3 rounded bg-cyan-950/30 hover:bg-cyan-950/75 border border-cyan-500/20 text-xs font-mono text-cyan-300 transition-all flex items-center justify-between">
+                                    <span><i class="fa-solid fa-code-commit mr-2"></i>Trigger Genesis Signal</span>
+                                    <i class="fa-solid fa-terminal text-[10px]"></i>
+                                </button>
+                                <button id="btnMetrics" class="w-full text-left p-3 rounded bg-amber-950/30 hover:bg-amber-950/75 border border-amber-500/20 text-xs font-mono text-amber-300 transition-all flex items-center justify-between">
+                                    <span><i class="fa-solid fa-chart-line mr-2"></i>Dump Telemetry Metrics</span>
+                                    <i class="fa-solid fa-terminal text-[10px]"></i>
+                                </button>
+                                <button id="btnWipe" class="w-full text-left p-3 rounded bg-slate-800/50 hover:bg-slate-800 border border-slate-700 text-xs font-mono text-slate-300 transition-all flex items-center justify-between">
+                                    <span><i class="fa-solid fa-eraser mr-2"></i>Clear Screen Buffer</span>
+                                    <i class="fa-solid fa-terminal text-[10px]"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ecosystem Repositories Registry -->
+            <section id="ecosystem" class="scroll-mt-24 mb-16">
+                <div class="text-center mb-10">
+                    <div class="text-cyan-400 font-mono text-xs tracking-widest uppercase mb-2">// Interlinked Systems</div>
+                    <h2 class="font-cinzel text-3xl md:text-4xl font-extrabold tracking-wider">Ecosystem Repositories</h2>
+                    <p class="text-slate-400 text-sm max-w-xl mx-auto mt-3">
+                        A list of live public domains under active orchestration in the QHDALabs digital space.
                     </p>
                 </div>
 
-                <!-- Repo 3: Coherence Bridge -->
-                <div class="glass-panel p-5 rounded-xl border border-cyan-500/10 hover:border-cyan-500/30 transition-all relative">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="bg-purple-500/10 text-purple-400 text-[10px] font-mono px-2 py-1 rounded">C++ / Substrates</span>
-                        <a href="https://github.com/QHDALabs/qhda-coherence-bridge" target="_blank" class="text-slate-400 hover:text-purple-400 transition-colors"><i class="fa-solid fa-up-right-from-square"></i></a>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Repo 1: Genesis Protocol -->
+                    <div class="glass-panel p-5 rounded-xl border border-cyan-500/10 hover:border-cyan-500/30 transition-all relative">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-cyan-500/10 text-cyan-400 text-[10px] font-mono px-2 py-1 rounded">JavaScript / HSM</span>
+                            <a href="https://github.com/QHDALabs/QHDALabs-Genesis-Protocol" target="_blank" class="text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                        <h3 class="font-mono text-base font-bold mb-2 text-slate-100">QHDALabs-Genesis-Protocol</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                            Ethical crowdsourcing platform defining core AI "Golden Rule" sets mapped to dedicated Quantum Hardware Security Modules (Q-HSM).
+                        </p>
                     </div>
-                    <h3 class="font-mono text-base font-bold mb-2 text-slate-100">qhda-coherence-bridge</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed mb-4">
-                        Abstraction layer matching relational models to actual computational engines, bridging virtual simulation states to execution grids.
-                    </p>
-                </div>
 
-                <!-- Repo 4: Wildfire Risk -->
-                <div class="glass-panel p-5 rounded-xl border border-cyan-500/10 hover:border-cyan-500/30 transition-all relative">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="bg-cyan-500/10 text-cyan-400 text-[10px] font-mono px-2 py-1 rounded">Python / AI</span>
-                        <a href="https://github.com/QHDALabs/QHDALabs-wildfire-risk-pl" target="_blank" class="text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <!-- Repo 2: Universe -->
+                    <div class="glass-panel p-5 rounded-xl border border-cyan-500/10 hover:border-cyan-500/30 transition-all relative">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-amber-500/10 text-amber-500 text-[10px] font-mono px-2 py-1 rounded">Python / Cosmology</span>
+                            <a href="https://github.com/QHDALabs/QHDALabs-Universe" target="_blank" class="text-slate-400 hover:text-amber-500 transition-colors"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                        <h3 class="font-mono text-base font-bold mb-2 text-slate-100">QHDALabs-Universe</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                            Global high-precision cosmology modeling utilizing Causal Set theories, emergent network states, and quantum geometric mechanics.
+                        </p>
                     </div>
-                    <h3 class="font-mono text-base font-bold mb-2 text-slate-100">QHDALabs-wildfire-risk-pl</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed mb-4">
-                        Machine learning systems executing real-time atmospheric modeling and critical environmental wildfire warning computations for Poland.
-                    </p>
-                </div>
 
-                <!-- Repo 5: Multiverse Theory -->
-                <div class="glass-panel p-5 rounded-xl border border-cyan-500/10 hover:border-cyan-500/30 transition-all relative">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="bg-amber-500/10 text-amber-500 text-[10px] font-mono px-2 py-1 rounded">TeX / LaTeX</span>
-                        <a href="https://github.com/QHDALabs/Multiverse-Theory" target="_blank" class="text-slate-400 hover:text-amber-500 transition-colors"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <!-- Repo 3: Coherence Bridge -->
+                    <div class="glass-panel p-5 rounded-xl border border-cyan-500/10 hover:border-cyan-500/30 transition-all relative">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-purple-500/10 text-purple-400 text-[10px] font-mono px-2 py-1 rounded">C++ / Substrates</span>
+                            <a href="https://github.com/QHDALabs/qhda-coherence-bridge" target="_blank" class="text-slate-400 hover:text-purple-400 transition-colors"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                        <h3 class="font-mono text-base font-bold mb-2 text-slate-100">qhda-coherence-bridge</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                            Abstraction layer matching relational models to actual computational engines, bridging virtual simulation states to execution grids.
+                        </p>
                     </div>
-                    <h3 class="font-mono text-base font-bold mb-2 text-slate-100">Multiverse-Theory</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed mb-4">
-                        A collaborative framework fork collecting structural definitions, advanced mathematics, and research preprints detailing multi-state cosmologies.
-                    </p>
-                </div>
 
-                <!-- Repo 6: Strategic Futures -->
-                <div class="glass-panel p-5 rounded-xl border border-cyan-500/10 hover:border-cyan-500/30 transition-all relative">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="bg-purple-500/10 text-purple-400 text-[10px] font-mono px-2 py-1 rounded">Org / Strategic</span>
-                        <a href="https://github.com/QHDALabs/QHDALabs" target="_blank" class="text-slate-400 hover:text-purple-400 transition-colors"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <!-- Repo 4: Wildfire Risk -->
+                    <div class="glass-panel p-5 rounded-xl border border-cyan-500/10 hover:border-cyan-500/30 transition-all relative">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-cyan-500/10 text-cyan-400 text-[10px] font-mono px-2 py-1 rounded">Python / AI</span>
+                            <a href="https://github.com/QHDALabs/QHDALabs-wildfire-risk-pl" target="_blank" class="text-slate-400 hover:text-cyan-400 transition-colors"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                        <h3 class="font-mono text-base font-bold mb-2 text-slate-100">QHDALabs-wildfire-risk-pl</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                            Machine learning systems executing real-time atmospheric modeling and critical environmental wildfire warning computations for Poland.
+                        </p>
                     </div>
-                    <h3 class="font-mono text-base font-bold mb-2 text-slate-100">QHDALabs Core Mainframe</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed mb-4">
-                        The central gateway tracking macro goals, ecosystem directories, architecture charts, and public initiatives.
-                    </p>
-                </div>
 
-            </div>
-        </section>
+                    <!-- Repo 5: Multiverse Theory -->
+                    <div class="glass-panel p-5 rounded-xl border border-cyan-500/10 hover:border-cyan-500/30 transition-all relative">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-amber-500/10 text-amber-500 text-[10px] font-mono px-2 py-1 rounded">TeX / LaTeX</span>
+                            <a href="https://github.com/QHDALabs/Multiverse-Theory" target="_blank" class="text-slate-400 hover:text-amber-500 transition-colors"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                        <h3 class="font-mono text-base font-bold mb-2 text-slate-100">Multiverse-Theory</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                            A collaborative framework fork collecting structural definitions, advanced mathematics, and research preprints detailing multi-state cosmologies.
+                        </p>
+                    </div>
+
+                    <!-- Repo 6: Strategic Futures -->
+                    <div class="glass-panel p-5 rounded-xl border border-cyan-500/10 hover:border-cyan-500/30 transition-all relative">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-purple-500/10 text-purple-400 text-[10px] font-mono px-2 py-1 rounded">Org / Strategic</span>
+                            <a href="https://github.com/QHDALabs/QHDALabs" target="_blank" class="text-slate-400 hover:text-purple-400 transition-colors"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                        <h3 class="font-mono text-base font-bold mb-2 text-slate-100">QHDALabs Core Mainframe</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                            The central gateway tracking macro goals, ecosystem directories, architecture charts, and public initiatives.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
 
     </main>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer class="border-t border-slate-900 bg-black/80 py-12 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="text-center md:text-left">
@@ -473,7 +487,7 @@
         
         let width, height;
         let particles = [];
-        const numParticles = 40;
+        const numParticles = 30;
 
         function resizeCanvas() {
             width = canvas.width = window.innerWidth;
@@ -485,8 +499,8 @@
             constructor() {
                 this.x = Math.random() * width;
                 this.y = Math.random() * height;
-                this.vx = (Math.random() - 0.5) * 0.4;
-                this.vy = (Math.random() - 0.5) * 0.4;
+                this.vx = (Math.random() - 0.5) * 0.3;
+                this.vy = (Math.random() - 0.5) * 0.3;
                 this.radius = Math.random() * 2 + 1;
             }
 
@@ -513,11 +527,9 @@
             }
         }
 
-        // Animation Loop: Particles connect to represent a Causal Set network
         function animate() {
             ctx.clearRect(0, 0, width, height);
             
-            // Draw particles and connect them
             for (let i = 0; i < particles.length; i++) {
                 particles[i].update();
                 particles[i].draw();
@@ -527,12 +539,11 @@
                     const dy = particles[i].y - particles[j].y;
                     const dist = Math.sqrt(dx * dx + dy * dy);
 
-                    // Connect lines if close enough
-                    if (dist < 120) {
+                    if (dist < 150) {
                         ctx.beginPath();
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.strokeStyle = `rgba(6, 182, 212, ${0.1 * (1 - dist/120)})`;
+                        ctx.strokeStyle = `rgba(6, 182, 212, ${0.1 * (1 - dist/150)})`;
                         ctx.lineWidth = 0.5;
                         ctx.stroke();
                     }
@@ -561,7 +572,6 @@
             const coreColor = `rgba(245, 158, 11, ${focus / 10})`;
             svgContent += `<circle cx="50" cy="50" r="${2 + (focus * 0.8)}" fill="${coreColor}" stroke="#06b6d4" stroke-width="0.5"/>`;
 
-            // Draw symmetry nodes representing ancestral/tribal lines combined with causal orbits
             for (let i = 0; i < symmetry; i++) {
                 const angle = (i * 360 / symmetry) * Math.PI / 180;
                 
@@ -571,7 +581,7 @@
                 svgContent += `<circle cx="${rx}" cy="${ry}" r="${1 + (focus * 0.2)}" fill="#06b6d4" />`;
                 svgContent += `<line x1="50" y1="50" x2="${rx}" y2="${ry}" stroke="rgba(6, 182, 212, 0.2)" stroke-width="0.5"/>`;
 
-                // Outer polygons forming geometric structures
+                // Outer polygons
                 const rxOuter = 50 + Math.cos(angle) * 35;
                 const ryOuter = 50 + Math.sin(angle) * 35;
                 const rxNext = 50 + Math.cos(((i + 1) * 360 / symmetry) * Math.PI / 180) * 35;
@@ -581,7 +591,6 @@
                 svgContent += `<polygon points="${rx},${ry} ${rxOuter},${ryOuter} ${rxNext},${ryNext}" stroke="rgba(6, 182, 212, 0.1)" fill="rgba(6, 182, 212, 0.03)" />`;
             }
 
-            // Outer Orbit ring
             svgContent += `<circle cx="50" cy="50" r="35" stroke="rgba(245, 158, 11, 0.2)" stroke-dasharray="1,2" stroke-width="0.5" fill="none" />`;
             
             svg.innerHTML = svgContent;
@@ -619,7 +628,6 @@
             terminalOutput.scrollTop = terminalOutput.scrollHeight;
         }
 
-        // Interactive terminal actions
         btnGenesis.addEventListener('click', () => {
             pushLog("Triggering Genesis Protocol sequence on safe-by-design modules...", "warning");
             setTimeout(() => {
@@ -637,19 +645,128 @@
             terminalOutput.innerHTML = '<div>[SYS_BUFF_CLEARED] Mainframe buffer reset complete. Listening...</div>';
         });
 
-        // Simulating passive terminal updates every few seconds
+        // Setup Dynamic Loading of Markdown Files
+        async function loadGardenIndex() {
+            try {
+                const response = await fetch('posts.json');
+                if (!response.ok) throw new Error("Index file not found");
+                const posts = await response.json();
+                
+                renderCategoryList(posts, 'blog', 'list-blog');
+                renderCategoryList(posts, 'research', 'list-research');
+                renderCategoryList(posts, 'notes', 'list-notes');
+                renderCategoryList(posts, 'news', 'list-news');
+            } catch (err) {
+                console.warn("Could not load dynamic posts.json fallback to manual links", err);
+                renderFallbackLists();
+            }
+        }
+
+        function renderCategoryList(posts, category, targetId) {
+            const container = document.getElementById(targetId);
+            const filtered = posts.filter(p => p.category === category);
+            
+            if (filtered.length === 0) {
+                container.innerHTML = `<div class="text-xs text-slate-500 font-mono italic">No transcripts scanned in this sector yet.</div>`;
+                return;
+            }
+
+            container.innerHTML = '';
+            filtered.forEach(post => {
+                const item = document.createElement('div');
+                item.className = 'group/item border-b border-slate-800/60 pb-2 cursor-pointer';
+                item.onclick = () => openArticle(post.path, post.category);
+                
+                item.innerHTML = `
+                    <div class="text-sm font-semibold text-slate-300 group-hover/item:text-cyan-400 transition-colors">${post.title}</div>
+                    <div class="flex justify-between items-center mt-1 text-[10px] font-mono text-slate-500">
+                        <span>${post.date || 'UNDATED'}</span>
+                        <span class="text-slate-400 group-hover/item:translate-x-1 transition-transform">READ NODE →</span>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // Direct Render Fallback in case python actions hasn't run yet
+        function renderFallbackLists() {
+            const defaultFallback = (title, path, cat) => `
+                <div class="group/item border-b border-slate-800/60 pb-2 cursor-pointer" onclick="openArticle('${path}', '${cat}')">
+                    <div class="text-sm font-semibold text-slate-300 group-hover/item:text-cyan-400 transition-colors">${title}</div>
+                    <div class="flex justify-between items-center mt-1 text-[10px] font-mono text-slate-500">
+                        <span>ACTIVE TRANSCRIPT</span>
+                        <span class="text-slate-400 group-hover/item:translate-x-1 transition-transform">READ NODE →</span>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('list-blog').innerHTML = defaultFallback("Genesis of the QHDALabs Digital Garden", "blog/2026-05-21-genesis-digital-garden.md", "blog");
+            document.getElementById('list-research').innerHTML = defaultFallback("Relational Quantum Temporal Encryption (v3.0)", "notes/2026-05-21-rqte-v3-relational-quantum-temporal-encryption.md", "research");
+            document.getElementById('list-notes').innerHTML = `<div class="text-xs text-slate-500 font-mono italic">Browse directly on Github raw file tree.</div>`;
+            document.getElementById('list-news').innerHTML = `<div class="text-xs text-slate-500 font-mono italic">Ecosystem log files initializing.</div>`;
+        }
+
+        // Core Dynamic Markdown Fetcher and Viewer
+        async function openArticle(relativePath, category) {
+            const mainLanding = document.getElementById('mainLandingContent');
+            const viewer = document.getElementById('articleViewer');
+            const mdOutput = document.getElementById('markdownOutput');
+            const metaCategory = document.getElementById('articleMetaCategory');
+
+            // Scroll to top of the screen smoothly
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Swap interfaces
+            mainLanding.classList.add('hidden');
+            viewer.classList.remove('hidden');
+            metaCategory.innerText = `${category} node // secure_stream`;
+
+            mdOutput.innerHTML = `
+                <div class="flex flex-col items-center justify-center py-20">
+                    <i class="fa-solid fa-atom animate-spin text-4xl text-cyan-400 mb-4"></i>
+                    <span class="font-mono text-xs text-slate-400">PULLING STATE VECTOR FROM CRYPTO SUBSTRATE...</span>
+                </div>
+            `;
+
+            try {
+                const response = await fetch(relativePath);
+                if (!response.ok) throw new Error("Could not retrieve markdown file stream.");
+                let text = await response.text();
+                
+                // Clean YAML metadata headers from top if present
+                text = text.replace(/^---[\s\S]*?---/, '');
+
+                // Parse standard markdown dynamically
+                mdOutput.innerHTML = marked.parse(text);
+                pushLog(`State vector [${relativePath}] fetched and decrypted cleanly.`, "success");
+            } catch (err) {
+                mdOutput.innerHTML = `
+                    <div class="p-6 border border-red-500/20 bg-red-950/20 rounded text-center">
+                        <i class="fa-solid fa-triangle-exclamation text-red-500 text-3xl mb-3"></i>
+                        <p class="font-mono text-sm text-red-400">CRITICAL STREAM ERROR: ${err.message}</p>
+                    </div>
+                `;
+            }
+        }
+
+        function closeArticleViewer() {
+            document.getElementById('mainLandingContent').classList.remove('hidden');
+            document.getElementById('articleViewer').classList.add('hidden');
+        }
+
+        // Passive telemetry simulator
         setInterval(() => {
             if (Math.random() > 0.4) {
                 const randomLog = logs[Math.floor(Math.random() * logs.length)];
                 pushLog(randomLog);
             }
-        }, 4000);
+        }, 5000);
 
-        // Run on Page Load
         window.onload = function() {
             resizeCanvas();
             animate();
             drawMandala();
+            loadGardenIndex();
             
             window.addEventListener('resize', resizeCanvas);
             pushLog("Main interface nodes operational. Welcome to QHDALabs.", "success");

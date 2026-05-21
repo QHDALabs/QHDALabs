@@ -14,7 +14,6 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  # Wymuszenie Node.js 24 zgodnie z nowym standardem GitHuba z 2026 roku
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
@@ -27,13 +26,72 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Generate Posts Index JSON
+        shell: python
+        run: |
+          import os
+          import json
+          import re
+
+          base_dir = 'digital-garden'
+          categories = ['blog', 'research', 'notes', 'news']
+          posts = []
+
+          for cat in categories:
+              cat_dir = os.path.join(base_dir, cat)
+              if not os.path.exists(cat_dir):
+                  continue
+              for file in os.listdir(cat_dir):
+                  if file.endswith('.md') and not file.startswith('_'):
+                      filepath = os.path.join(cat_dir, file)
+                      try:
+                          with open(filepath, 'r', encoding='utf-8') as f:
+                              content = f.read()
+                          
+                          title = file
+                          date = ''
+                          tags = []
+                          
+                          # Parsowanie Front Matter
+                          fm_match = re.match(r'^---\s*\n(.*?)\n---\s*\n', content, re.DOTALL)
+                          if fm_match:
+                              fm_text = fm_match.group(1)
+                              title_match = re.search(r'^title:\s*[\"\'\']?(.*?)[\"\'\']?$', fm_text, re.MULTILINE)
+                              date_match = re.search(r'^date:\s*(.*?)$', fm_text, re.MULTILINE)
+                              tags_match = re.search(r'^tags:\s*\[(.*?)\]$', fm_text, re.MULTILINE)
+                              
+                              if title_match:
+                                  title = title_match.group(1).replace('\"', '').replace('\'', '')
+                              if date_match:
+                                  date = date_match.group(1).strip().replace('\"', '').replace('\'', '')
+                              if tags_match:
+                                  tags = [t.strip().strip('\"').strip('\'') for t in tags_match.group(1).split(',')]
+                          
+                          posts.append({
+                              'title': title,
+                              'date': date,
+                              'tags': tags,
+                              'category': cat,
+                              'path': f'{cat}/{file}'
+                          })
+                      except Exception as e:
+                          print(f"Błąd podczas parsowania pliku {filepath}: {e}")
+
+          with open(os.path.join(base_dir, 'posts.json'), 'w', encoding='utf-8') as f:
+              json.dump(posts, f, ensure_ascii=False, indent=2)
+          print('Successfully generated posts.json')
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-         
           path: './digital-garden'
 
       - name: Deploy to GitHub Pages
