@@ -25,7 +25,6 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-
 # QHDALabs
 
 **Engineering the Future at the Intersection of Quantum Computing, Artificial Intelligence, and Civilizational Systems.**
@@ -45,6 +44,7 @@ To build and accelerate technologies that strengthen civilization, expand intell
 ## Core Domains
 
 ### Quantum Technologies
+
 - Quantum computing architectures  
 - Quantum algorithms & simulations  
 - Error resilience and decoherence mitigation  
@@ -52,6 +52,7 @@ To build and accelerate technologies that strengthen civilization, expand intell
 - Long-horizon research toward stable scalable quantum systems  
 
 ### Artificial Intelligence
+
 - Advanced AI systems integration  
 - Autonomous reasoning frameworks  
 - AI for infrastructure and industry  
@@ -59,6 +60,7 @@ To build and accelerate technologies that strengthen civilization, expand intell
 - Strategic AI applications  
 
 ### Infrastructure & Security
+
 - Critical infrastructure modernization  
 - Cybersecurity architectures  
 - Industrial automation systems  
@@ -66,6 +68,7 @@ To build and accelerate technologies that strengthen civilization, expand intell
 - Resilience engineering  
 
 ### Science & Frontier Research
+
 - Emergent models of spacetime  
 - Information-based physics concepts  
 - Computational cosmology  
