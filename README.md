@@ -218,7 +218,8 @@ NODE GENESIS — first five months
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=QHDALabs&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=00FF41&icon_color=FFE9A8&text_color=8CF7B0&ring_color=00FF41" alt="GitHub stats" height="170" />
+<img src="https://raw.githubusercontent.com/QHDALabs/QHDALabs/main/assets/qhda-stats.svg" alt="Lab telemetry" width="100%" />
+
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=QHDALabs&hide_border=true&background=0D1117&stroke=00FF41&ring=00FF41&fire=FFE9A8&currStreakNum=EAFFF1&sideNums=EAFFF1&currStreakLabel=00FF41&sideLabels=8CF7B0&dates=4C9E63" alt="Streak" height="170" />
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=QHDALabs&bg_color=0D1117&color=8CF7B0&title_color=00FF41&line=00FF41&point=FFE9A8&area=true&area_color=00FF41&hide_border=true" alt="Activity graph" width="100%" />

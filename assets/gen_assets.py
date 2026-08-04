@@ -334,11 +334,112 @@ def footer(path, motto):
     open(path, "w", encoding="utf-8").write(s.getvalue())
 
 
+# ==========================================================================
+# 4. PANEL TELEMETRII — kafelki + pierscien jezykow
+# ==========================================================================
+LANGS = [  # (nazwa, procent, kolor)
+    ("Python",     74.30, "#00FF41"),
+    ("HTML",       18.68, "#00C8A0"),
+    ("TeX",         3.19, "#FFE9A8"),
+    ("JavaScript",  2.10, "#8CF7B0"),
+    ("PowerShell",  0.92, "#4C9E63"),
+    ("other",       0.81, "#2F6B45"),
+]
+
+TILES = [
+    ("21",      "NODES"),       ("12",   "PUBLIC"),
+    ("9",       "ENCRYPTED"),   ("349",  "COMMITS"),
+    ("1.96 MB", "CODEBASE"),    ("10",   "LANGUAGES"),
+    ("74.3%",   "PYTHON"),      ("2026-02", "UPTIME SINCE"),
+]
+
+
+def stats(path, generated):
+    W, H = 1200, 300
+    cx, cy, r, sw = 880, 178, 62, 22
+    circ = 2 * 3.14159265 * r
+    s = io.StringIO()
+    s.write(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
+            f'viewBox="0 0 {W} {H}" role="img" aria-label="QHDALabs lab telemetry">\n')
+    s.write(DEFS)
+    s.write('  <style>\n')
+    s.write(RAIN_CSS)
+    s.write("""
+    .hdr{font-family:'Courier New',ui-monospace,monospace;font-size:13px;letter-spacing:3.5px;
+      fill:#00FF41}
+    .hdr.dim{opacity:.5;letter-spacing:2px}
+    .num{font-family:'Courier New',ui-monospace,monospace;font-weight:700;font-size:33px;
+      fill:#EAFFF1;filter:url(#glow-s)}
+    .lbl{font-family:'Courier New',ui-monospace,monospace;font-size:10.5px;letter-spacing:2.6px;
+      fill:#4CFF7A;opacity:.8}
+    .leg{font-family:'Courier New',ui-monospace,monospace;font-size:12px;fill:#9DFFC2}
+    .leg.pct{fill:#EAFFF1;opacity:.85}
+    .ctr{font-family:'Courier New',ui-monospace,monospace;font-weight:700;font-size:26px;
+      fill:#EAFFF1;text-anchor:middle}
+    .ctr.s{font-size:10.5px;font-weight:400;fill:#4CFF7A;letter-spacing:2.5px;opacity:.85}
+    .seg{fill:none;stroke-linecap:butt}
+    @media (prefers-reduced-motion:reduce){.col{animation:none}}
+""")
+    s.write('  </style>\n')
+    s.write(f'  <clipPath id="cut"><rect width="{W}" height="{H}" rx="14"/></clipPath>\n')
+    s.write('  <g clip-path="url(#cut)">\n')
+    s.write(f'    <rect width="{W}" height="{H}" fill="url(#bg)"/>\n')
+    s.write('    ' + rain(W, H, step=34, minlen=4, maxlen=10, opacity=0.22) + '\n')
+    s.write(f'    <rect width="{W}" height="{H}" fill="#010604" opacity=".55"/>\n')
+    # pasek naglowka
+    s.write('    <path d="M 0 44 H 1200" stroke="#00FF41" stroke-opacity=".3" stroke-width="1"/>\n')
+    s.write('    <text class="hdr" x="30" y="29">&#9622; LAB TELEMETRY</text>\n')
+    s.write(f'    <text class="hdr dim" x="{W-30}" y="29" text-anchor="end">'
+            f'snapshot {generated} &#183; regenerate: python assets/gen_assets.py</text>\n')
+    # kafelki 4x2
+    x0, colw = 34, 176
+    for i, (num, lbl) in enumerate(TILES):
+        col, row = i % 4, i // 4
+        x = x0 + col * colw
+        ybase = 122 + row * 84
+        s.write(f'    <path d="M {x-8} {ybase-30} V {ybase+16}" stroke="#00FF41" '
+                f'stroke-opacity=".45" stroke-width="2"/>\n')
+        s.write(f'    <text class="num" x="{x}" y="{ybase}">{num}</text>\n')
+        s.write(f'    <text class="lbl" x="{x}" y="{ybase+20}">{lbl}</text>\n')
+    # separator pionowy
+    s.write('    <path d="M 748 62 V 262" stroke="#00FF41" stroke-opacity=".22" stroke-width="1"/>\n')
+    # pierscien jezykow
+    s.write(f'    <circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="#0a2415" '
+            f'stroke-width="{sw}"/>\n')
+    acc = 0.0
+    for name, pct, color in LANGS:
+        seg = circ * pct / 100.0
+        s.write(f'    <circle class="seg" cx="{cx}" cy="{cy}" r="{r}" stroke="{color}" '
+                f'stroke-width="{sw}" stroke-dasharray="0 {circ:.2f}" '
+                f'stroke-dashoffset="{-acc:.2f}" transform="rotate(-90 {cx} {cy})">\n'
+                f'      <animate attributeName="stroke-dasharray" '
+                f'from="0 {circ:.2f}" to="{seg:.2f} {circ-seg:.2f}" '
+                f'dur="1.1s" begin="0.15s" fill="freeze" calcMode="spline" '
+                f'keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/>\n'
+                f'    </circle>\n')
+        acc += seg
+    s.write(f'    <text class="ctr" x="{cx}" y="{cy+2}">1.96</text>\n')
+    s.write(f'    <text class="ctr s" x="{cx}" y="{cy+20}">MB TOTAL</text>\n')
+    # legenda
+    lx = 978
+    for i, (name, pct, color) in enumerate(LANGS):
+        y = 118 + i * 24
+        s.write(f'    <rect x="{lx}" y="{y-9}" width="11" height="11" rx="2" fill="{color}"/>\n')
+        s.write(f'    <text class="leg" x="{lx+20}" y="{y}">{name}</text>\n')
+        s.write(f'    <text class="leg pct" x="{W-30}" y="{y}" text-anchor="end">{pct:.2f}%</text>\n')
+    s.write(f'    <rect width="{W}" height="{H}" fill="url(#scan)"/>\n')
+    s.write(f'    <rect x="1" y="1" width="{W-2}" height="{H-2}" rx="13" fill="none" '
+            f'stroke="#00FF41" stroke-opacity=".3" stroke-width="1.4"/>\n')
+    s.write('  </g>\n</svg>\n')
+    open(path, "w", encoding="utf-8").write(s.getvalue())
+
+
 banner(os.path.join(OUT, "qhda-banner.svg"), nodes=21, commits=349, code_mb="1.96MB", since="2026-02")
+stats(os.path.join(OUT, "qhda-stats.svg"), generated="2026-08-04")
 divider(os.path.join(OUT, "qhda-divider.svg"))
 footer(os.path.join(OUT, "qhda-footer.svg"),
        "THINK DEEP &#183; BUILD BOLD &#183; SCALE CIVILIZATIONS")
 
-for f in ("qhda-banner.svg", "qhda-divider.svg", "qhda-footer.svg"):
+for f in ("qhda-banner.svg", "qhda-divider.svg", "qhda-footer.svg", "qhda-stats.svg"):
     p = os.path.join(OUT, f)
     print(f, os.path.getsize(p), "B")

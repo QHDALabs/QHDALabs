@@ -16,21 +16,21 @@
     @media (prefers-reduced-motion:reduce){.run{animation:none}}
   </style>
   <path d="M 0 11.0 H 1200" stroke="url(#ln)" stroke-width="1.2"/>
-  <text x="40" y="15.0" text-anchor="middle">7</text>
-  <text x="114" y="15.0" text-anchor="middle">ｶ</text>
-  <text x="188" y="15.0" text-anchor="middle">ﾊ</text>
-  <text x="262" y="15.0" text-anchor="middle">ｶ</text>
-  <text x="336" y="15.0" text-anchor="middle">C</text>
-  <text x="410" y="15.0" text-anchor="middle">ﾂ</text>
-  <text x="484" y="15.0" text-anchor="middle">ﾀ</text>
-  <text x="558" y="15.0" text-anchor="middle">B</text>
-  <text x="632" y="15.0" text-anchor="middle">ﾚ</text>
-  <text x="706" y="15.0" text-anchor="middle">ｸ</text>
-  <text x="780" y="15.0" text-anchor="middle">ﾙ</text>
-  <text x="854" y="15.0" text-anchor="middle">ﾏ</text>
-  <text x="928" y="15.0" text-anchor="middle">ﾉ</text>
-  <text x="1002" y="15.0" text-anchor="middle">ﾆ</text>
-  <text x="1076" y="15.0" text-anchor="middle">5</text>
-  <text x="1150" y="15.0" text-anchor="middle">ｾ</text>
+  <text x="40" y="15.0" text-anchor="middle">φ</text>
+  <text x="114" y="15.0" text-anchor="middle">ｺ</text>
+  <text x="188" y="15.0" text-anchor="middle">ｵ</text>
+  <text x="262" y="15.0" text-anchor="middle">ﾕ</text>
+  <text x="336" y="15.0" text-anchor="middle">A</text>
+  <text x="410" y="15.0" text-anchor="middle">ﾐ</text>
+  <text x="484" y="15.0" text-anchor="middle">ﾛ</text>
+  <text x="558" y="15.0" text-anchor="middle">Y</text>
+  <text x="632" y="15.0" text-anchor="middle">ﾉ</text>
+  <text x="706" y="15.0" text-anchor="middle">&lt;</text>
+  <text x="780" y="15.0" text-anchor="middle">ﾈ</text>
+  <text x="854" y="15.0" text-anchor="middle">ﾀ</text>
+  <text x="928" y="15.0" text-anchor="middle">ﾎ</text>
+  <text x="1002" y="15.0" text-anchor="middle">4</text>
+  <text x="1076" y="15.0" text-anchor="middle">ﾖ</text>
+  <text x="1150" y="15.0" text-anchor="middle">Δ</text>
   <circle class="run" cx="-40" cy="11.0" r="26" fill="url(#dot)"/>
 </svg>
