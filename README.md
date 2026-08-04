@@ -33,7 +33,7 @@ root@qhdalabs:~$ whoami --verbose
   domains .......... quantum systems · applied AI · critical infrastructure · frontier science
   method ........... relation as the unit  ·  verification before discovery
   horizon .......... decades, not quarters
-  portal ........... https://qhdalabs.com  ·  https://qhdalabs.github.io
+  portal ........... https://qhdalabs.com  ·  https://krzyshtof.com
 
 root@qhdalabs:~$ cat /etc/mission
 
