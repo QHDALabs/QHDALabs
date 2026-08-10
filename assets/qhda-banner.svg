@@ -157,9 +157,9 @@
       </g>
     </g>
     <text class="hud" x="34" y="38">root@qhdalabs:~$ ./wake_up.sh<tspan class="caret" dx="8">&#9608;</tspan></text>
-    <text class="hud" x="1166" y="38" text-anchor="end">NODES 21 &#183; COMMITS 349 &#183; CODE 1.96MB &#183; SINCE 2026-02</text>
+    <text class="hud" x="1166" y="38" text-anchor="end">12 PUBLIC REPOS &#183; 3 TEST SUITES &#183; 0 PEER-REVIEWED &#183; SINCE 2026-02</text>
     <text class="title flicker" x="600" y="110">QHDALabs</text>
-    <text class="sub" x="600" y="139">STRATEGIC AI &#183; QUANTUM SYSTEMS &#183; CIVILIZATIONAL INFRASTRUCTURE</text>
+    <text class="sub" x="600" y="139">RELATIONAL QUANTUM MODELS &#183; VERIFIED INFERENCE &#183; APPLIED RISK SYSTEMS</text>
     <text class="hud" x="600" y="447" text-anchor="middle" opacity=".55">&#12467;&#12540;&#12489;&#12399;&#36947;&#12391;&#12354;&#12427; &#183; THE CODE IS THE PATH</text>
     <rect width="1200" height="460" fill="url(#scan)"/>
     <rect x="1" y="1" width="1198" height="458" rx="15" fill="none" stroke="#00FF41" stroke-opacity=".32" stroke-width="1.5"/>

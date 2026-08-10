@@ -114,4 +114,4 @@ let's talk.
 ---
 
 *Krzysztof Banasiewicz — independent researcher*  
-*qhdalabs.contact@gmail.com*
+*contact@qhdalabs.com*

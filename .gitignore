@@ -7,6 +7,9 @@
 ## https://docs.npmjs.com/misc/faq#should-i-check-my-node_modules-folder-into-git
 node_modules
 
+# Generated at deploy time by .github/workflows/deploy.yml
+digital-garden/posts.json
+
 # Book build output
 _book
 

@@ -1,297 +1,289 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/QHDALabs/QHDALabs/main/assets/qhda-banner.svg" alt="QHDALabs — Strategic AI, Quantum Systems &amp; Civilizational Infrastructure" width="100%" />
-
-<a href="https://qhdalabs.com">
-  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=21&pause=1000&color=00FF41&center=true&vCenter=true&width=880&height=42&lines=Wake+up...+the+lab+is+real.;There+is+no+spoon+%E2%80%94+only+the+state+vector.;Relation+is+the+unit.+Verification+before+discovery.;Form+is+emptiness.+Emptiness+compiles.;21+nodes+%C2%B7+349+commits+%C2%B7+one+long-horizon+mission." alt="Typing SVG" />
-</a>
-
-<br/>
-
-<img src="https://komarev.com/ghpvc/?username=QHDALabs&style=for-the-badge&color=00ff41&label=SIGNAL+TRACES" alt="Visitors" />
-<img src="https://img.shields.io/github/followers/QHDALabs?style=for-the-badge&logo=github&label=OPERATORS&labelColor=0d1117&color=00ff41" alt="Followers" />
-<img src="https://img.shields.io/badge/NODES-21-00ff41?style=for-the-badge&labelColor=0d1117&logo=databricks&logoColor=00ff41" alt="Nodes" />
-<img src="https://img.shields.io/badge/COMMITS-349-00ff41?style=for-the-badge&labelColor=0d1117&logo=git&logoColor=00ff41" alt="Commits" />
-<br/>
-<img src="https://img.shields.io/badge/status-building%20the%20future-00ff41?style=for-the-badge&labelColor=0d1117&logo=rocket&logoColor=00ff41" alt="Status" />
-<img src="https://img.shields.io/badge/phase-01%20%C2%B7%20foundation-FFE9A8?style=for-the-badge&labelColor=0d1117&logo=target&logoColor=FFE9A8" alt="Phase" />
-<img src="https://img.shields.io/badge/base-Poland%20%7C%20EU%20%7C%20Global-00C8A0?style=for-the-badge&labelColor=0d1117&logo=europeanunion&logoColor=00C8A0" alt="Base" />
-<img src="https://img.shields.io/badge/mode-deep%20work-8CF7B0?style=for-the-badge&labelColor=0d1117&logo=zenn&logoColor=8CF7B0" alt="Mode" />
-
-<img src="https://raw.githubusercontent.com/QHDALabs/QHDALabs/main/assets/qhda-divider.svg" alt="" width="100%" />
+<img src="https://raw.githubusercontent.com/QHDALabs/QHDALabs/main/assets/qhda-banner.svg" alt="QHDALabs — independent research lab: relational quantum models, verification-first scientific tooling, applied risk systems" width="100%" />
 
 </div>
 
-## `▚` SESSION START
+# QHDALabs
 
-```console
-root@qhdalabs:~$ whoami --verbose
+**Independent research lab building verification-first tooling for relational quantum models,
+scientific-literature inference, and applied environmental risk — with negative results published
+alongside positive ones.**
 
-  operator ......... Krzysztof Banasiewicz
-  entity ........... QHDALabs — Strategic Futures Lab (independent deep-tech)
-  location ......... Poland  ·  EU  ·  Global
-  domains .......... quantum systems · applied AI · critical infrastructure · frontier science
-  method ........... relation as the unit  ·  verification before discovery
-  horizon .......... decades, not quarters
-  portal ........... https://qhdalabs.com  ·  https://krzyshtof.com
+Operator: Krzysztof W. Banasiewicz · Poland / EU · active since 2026-02 · <contact@qhdalabs.com>
 
-root@qhdalabs:~$ cat /etc/mission
+---
 
-  Build and accelerate technologies that strengthen civilization,
-  expand intelligence, and unlock new physical and computational frontiers.
+## Executive summary
 
-root@qhdalabs:~$ _
-```
+QHDALabs is a one-person independent lab with **12 public repositories**. The work spans three
+connected lines: (1) *relational quantum models* — mid-circuit measurement used as a source of
+conditional structure and emergent ordering (`qmnet`, `qhda-core`); (2) *verification-first
+scientific inference* — a pipeline that tests candidate relations against explicit null models
+before surfacing them (`QHDALabs-Axon`); (3) *applied risk systems* — an operational wildfire-risk
+pipeline for Poland built on public satellite and geospatial data (`QHDALabs-wildfire-risk-pl`).
 
-> We operate where conventional boundaries end — combining **quantum science**, **AI systems**,
-> **critical infrastructure**, **security engineering** and **large-scale strategic thinking**.
+The distinguishing practice is methodological, not thematic: hypotheses are **pre-registered with
+frozen statistics before results are seen**, tested against explicit nulls with multiple-testing
+correction, and **stopped when they fail**. Three separate lines have produced published null or
+failed results — a pre-registered held-out test that did not recover, a confirmatory tier that
+failed its own contract and halted development, and a cosmological search that confirmed a null.
+Those failures are documented in-repo with the numbers, and are the strongest evidence here that
+the process is real.
 
-<div align="center"><img src="https://raw.githubusercontent.com/QHDALabs/QHDALabs/main/assets/qhda-divider.svg" alt="" width="100%" /></div>
+**No result in this lab has been peer-reviewed, run on physical quantum hardware, or externally
+validated.** Everything below is labelled with what it actually is.
 
-## `▚` THE CONSTRUCT — ecosystem topology
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/QHDALabs/QHDALabs/main/assets/qhda-stats.svg" alt="Public evidence snapshot: 12 public repositories, 3 with test suites, 4 technical notes, 2 pre-registered studies, 3 published null results, 0 peer-reviewed publications, 0 QPU runs, active since 2026-02" width="100%" />
+
+<sub>Every figure above is checkable against public files — see <a href="./docs/EVIDENCE.md">docs/EVIDENCE.md</a>. Regenerate: <code>python assets/gen_assets.py</code></sub>
+
+</div>
+
+---
+
+## What exists today
+
+Status vocabulary: **Implemented** (working code + tests) · **Experimental** (working code,
+results from simulation or single runs, no test suite) · **Research notes** (written analysis, no
+code) · **Spec** (design document only) · **Infrastructure** (publishing / tooling).
+
+| Repository | What it is | Status | Directly verifiable evidence |
+|---|---|---|---|
+| [**QHDALabs-Axon**](https://github.com/QHDALabs/QHDALabs-Axon) | Verification-first inference over scientific literature. Two relation types with registered verifiers: lexical proximity (TF-IDF + empirical random-pair null + BH-FDR) and ABC bridge (Swanson closed discovery, two explicit nulls). | Implemented | 24 test modules, CI workflow, [`VERIFICATION_LOG.md`](https://github.com/QHDALabs/QHDALabs-Axon/blob/main/VERIFICATION_LOG.md), pre-registration docs in `docs/`, runnable corpora in `data/` |
+| [**QHDALabs-wildfire-risk-pl**](https://github.com/QHDALabs/QHDALabs-wildfire-risk-pl) | Wildfire risk pipeline for Poland (v5: 33-node Lower Silesia forest-district graph). Ingests NASA FIRMS, OSM/Geofabrik, BDOT10k, CLC 2018; fuses ignition pressure, NDWI vegetation stress and topology into risk scores. | Implemented | `v5/` pytest suite, `v5/topology/*.json` outputs, SHAP reports, generated maps, two technical notes (PDF) |
+| [**qhda-core**](https://github.com/QHDALabs/qhda-core) | Shared kernel: relational state, quantum circuit helpers, emergent-clock primitives. Consumed by Axon as a dependency. | Implemented | `src/qhda_core/`, `tests/test_integration.py`, `examples/wildfire_relational.py`, `pyproject.toml` |
+| [**qmnet**](https://github.com/QHDALabs/qmnet) | Three Qiskit experiments: decoherence routing via ancilla coupling angle; measurement-fuelled conditional bridges in graph-state echo; RQTE, a 16-step construction where the key derives from an emergent measurement timeline. | Experimental | 4 runnable scripts, 2 technical notes (PDF), reported numbers reproducible on an ideal simulator in ~11 min total |
+| [**QHDALabs-XSIG**](https://github.com/QHDALabs/QHDALabs-XSIG) | Search for non-random cross-channel structure in ΛCDM residuals (Planck 2018 TT, D/H, He-4, α dipole + King+2012 raw absorbers, eBOSS BAO). | Experimental | Real Planck data in `data/planck/`, run scripts, result plots — **published null result** |
+| [**QHDALabs-Genesis-Protocol**](https://github.com/QHDALabs/QHDALabs-Genesis-Protocol) | React voting frontend for collecting ethical-constraint preferences intended for a safety-by-design hardware module. | Experimental (local only) | Source runs via `npm run dev`. **No public deployment exists.** Hardware module and vote ledger are conceptual. |
+| [**QHDALabs-RTANA**](https://github.com/QHDALabs/QHDALabs-RTANA) | Question: can a neural architecture carry an internal relational clock rather than an external timestamp? | Research notes — **no code** | `MANIFESTO.md`, `QUESTIONS.md`, `RESEARCH_LOG.md`. Architecture, PoC and evaluation protocol are all unstarted. |
+| [**QHDALabs-Universe**](https://github.com/QHDALabs/QHDALabs-Universe) | Umbrella for planned cosmology sub-projects (cosmoaudit, photon-engine, h0lab, reltime, cosmohub). | Spec / concept ("init alpha") | README only. No implementations, datasets or results. |
+| [**qhda-coherence-bridge**](https://github.com/QHDALabs/qhda-coherence-bridge) | Earliest design note: abstraction layer between relational quantum models and executable substrates. | Spec | Design description only (~9 KB). Superseded in practice by `qhda-core`. |
+| [**qhdalabs.github.io**](https://github.com/QHDALabs/qhdalabs.github.io) | Research portal and papers index → [live](https://qhdalabs.github.io) | Infrastructure | Deployed site |
+| [**QHDALabs**](https://github.com/QHDALabs/QHDALabs) | This repository: profile, evidence documents, and the digital garden below. | Infrastructure | You are reading it |
+| [**Multiverse-Theory**](https://github.com/QHDALabs/Multiverse-Theory) | **Fork of an upstream TeX project.** Kept for reference reading. | Fork — *not lab output* | Commit history belongs to upstream authors, not to QHDALabs |
+
+Licenses differ per repository (this one and `qmnet` are MIT; Axon is RCSAL v2.0). Check each repo.
+
+**On private work.** Additional repositories are private. They are deliberately **not** offered as
+evidence and no claims are made about them; nothing in this document depends on them. Everything
+asserted above can be checked against public files today.
+
+📄 Full claim-by-claim matrix: **[docs/EVIDENCE.md](./docs/EVIDENCE.md)** ·
+Per-component status and roadmap: **[docs/PROJECT_STATUS.md](./docs/PROJECT_STATUS.md)**
+
+---
+
+## The method: verification before discovery
+
+The lab's operating rule is that a hypothesis is registered before it is tested, and a failure ends
+the line rather than being quietly re-scoped. Four documented instances:
+
+| Study | Pre-registered? | Outcome | Where |
+|---|---|---|---|
+| Axon `PROXIMITY` — 780 pairs from a 40-document arXiv corpus | Null model fixed in advance | **Null.** 34 nominally significant pairs; **0 survive BH-FDR at α=0.05.** Reported as the correct answer, not a failure. | [`VERIFICATION_LOG.md`](https://github.com/QHDALabs/QHDALabs-Axon/blob/main/VERIFICATION_LOG.md) |
+| Axon `ABC_BRIDGE` — in-sample positive control (Swanson's Raynaud / fish-oil, 717 pre-1986 MeSH records) | Yes | **Recovered.** direct_sim = 0.046, mediated = 5.10, p_random = 0.0345. | same |
+| Axon `ABC_BRIDGE` — pre-registered held-out case (migraine / magnesium), statistics frozen before the run | Yes | **Failed to recover** (p_random = 0.1214). Worse, a sibling literature (cluster headache, direct_sim = 0.283) would have been *falsely accepted* at q = 0.0135 — so the gate cannot separate siblings from true bridges. Documented rather than dropped. | same |
+| Axon V2-A Tier-0 confirmatory, frozen pre-registration, R = 200, 11 cells | Yes | **Failed the contract cell** `thin_half_n4` (degradation 0.53 < 0.80 required). Latent-parent control passed. **Per protocol, development stopped; Tier 1 was never attempted.** | [`docs/ABC_BRIDGE_V2A_TIER0_PRE_REGISTRATION.md`](https://github.com/QHDALabs/QHDALabs-Axon/blob/main/docs/ABC_BRIDGE_V2A_TIER0_PRE_REGISTRATION.md) |
+| XSIG — cross-channel structure in ΛCDM residuals, 500 bootstrap permutations | Positive control run first on synthetic injection (d ≈ 2.5, p < 0.0001) | **Null confirmed.** Best real-data test z = +1.29, p = 0.108; no test reached p < 0.05. Replacing the smooth α dipole model with raw King+2012 absorbers removed the apparent signal — i.e. the earlier hint was a model artifact, and this is stated. | [XSIG README](https://github.com/QHDALabs/QHDALabs-XSIG#readme) |
+
+A comparable gate exists in the applied work: the wildfire pipeline **blocks fusion output when
+layer coverage falls below 70% or fewer than three data sources are present**, and returns `null`
+rather than a fabricated score.
+
+The same rule applies to `qmnet`: the BUTTERFLY irreversibility class produced *lower* timeline
+entropy (0.811 bit) than the other modes (≈1.0), which was the opposite of the expectation. It is
+reported as an open question, not smoothed over.
+
+---
+
+## Architecture
+
+Edges below are actual dependencies or documented derivations, not aspiration.
 
 ```mermaid
-%%{init: {'theme':'base','themeVariables':{'primaryColor':'#04170d','primaryTextColor':'#9DFFC2','primaryBorderColor':'#00FF41','lineColor':'#00FF41','secondaryColor':'#062313','tertiaryColor':'#03130a','fontFamily':'ui-monospace, monospace','fontSize':'14px','edgeLabelBackground':'#0d1117'}}}%%
 flowchart TD
-    CORE(["<b>qhda-core</b><br/>relational primitives"]):::kernel
-    BRIDGE(["<b>qhda-coherence-bridge</b><br/>models → executable substrates"]):::kernel
+    CORE["<b>qhda-core</b><br/>relational state · circuit helpers<br/>emergent-clock primitives<br/><i>implemented · tested</i>"]
 
-    CORE --> AXON["<b>QHDALabs-Axon</b><br/>science nervous system"]:::app
-    CORE --> RTANA["<b>QHDALabs-RTANA</b><br/>relational time in neural nets"]:::res
-    CORE --> XSIG["<b>QHDALabs-XSIG</b><br/>structural information geometry"]:::res
-    CORE --> BRIDGE
-    BRIDGE --> QMNET["<b>qmnet</b><br/>quantum relational network"]:::res
-    BRIDGE --> UNI["<b>QHDALabs-Universe</b><br/>precision cosmology"]:::res
+    AXON["<b>QHDALabs-Axon</b><br/>verification-first inference<br/>over scientific literature<br/><i>implemented · tested · CI</i>"]
+    FIRE["<b>wildfire-risk-pl</b><br/>operational risk pipeline (PL)<br/><i>implemented · tested</i>"]
+    QMNET["<b>qmnet</b><br/>measurement-fuelled bridges · RQTE<br/><i>experimental · ideal simulator only</i>"]
+    XSIG["<b>QHDALabs-XSIG</b><br/>ΛCDM residual structure search<br/><i>experimental · null result</i>"]
+    GEN["<b>Genesis-Protocol</b><br/>ethical-constraint voting UI<br/><i>experimental · local only</i>"]
 
-    AXON --> PORTAL["<b>qhdalabs.github.io</b><br/>research portal &amp; papers"]:::pub
-    RTANA --> PORTAL
-    XSIG --> PORTAL
+    RTANA["<b>QHDALabs-RTANA</b><br/>relational time in neural nets<br/><i>research notes · no code</i>"]
+    UNI["<b>QHDALabs-Universe</b><br/>cosmology umbrella<br/><i>spec / concept</i>"]
+    BRIDGE["<b>qhda-coherence-bridge</b><br/>earliest design note<br/><i>spec</i>"]
+
+    DATA[("public data<br/>Planck · FIRMS · OSM<br/>BDOT10k · CLC · MEDLINE")]
+    PORTAL["<b>qhdalabs.github.io</b> + this profile<br/><i>publishing</i>"]
+
+    CORE -->|pip dependency| AXON
+    CORE -->|examples/wildfire_relational.py| FIRE
+    BRIDGE -.->|superseded by| CORE
+    QMNET -->|motivates| RTANA
+    QMNET -->|primitives shared with| CORE
+
+    DATA --> AXON
+    DATA --> FIRE
+    DATA --> XSIG
+
+    AXON --> PORTAL
+    FIRE --> PORTAL
     QMNET --> PORTAL
+    XSIG --> PORTAL
+    GEN --> PORTAL
+    UNI -.-> PORTAL
 
-    GEN["<b>Genesis-Protocol</b><br/>ethical consensus for Q-HSM"]:::gov
-    FIRE["<b>wildfire-risk-pl</b><br/>real-time risk for Poland"]:::app
-    HUB["<b>QHDALabs</b> profile + digital garden"]:::pub
-
-    PORTAL --> HUB
-    GEN --> HUB
-    FIRE --> HUB
-    DARK["7 encrypted nodes<br/>policy · industry · cognitive security"]:::dark -.-> HUB
-
-    classDef kernel fill:#03130a,stroke:#FFE9A8,stroke-width:2px,color:#FFE9A8
-    classDef res    fill:#04170d,stroke:#00FF41,stroke-width:1.5px,color:#9DFFC2
-    classDef app    fill:#04170d,stroke:#00C8A0,stroke-width:1.5px,color:#9DFFC2
-    classDef gov    fill:#04170d,stroke:#8CF7B0,stroke-width:1.5px,color:#9DFFC2
-    classDef pub    fill:#062313,stroke:#0BD45E,stroke-width:2px,color:#EAFFF1
-    classDef dark   fill:#0a0a0a,stroke:#4C9E63,stroke-width:1.5px,color:#4C9E63
+    classDef impl  fill:#04170d,stroke:#00FF41,stroke-width:2px,color:#EAFFF1
+    classDef exp   fill:#04170d,stroke:#00C8A0,stroke-width:1.5px,color:#9DFFC2
+    classDef notes fill:#0d1117,stroke:#4C9E63,stroke-width:1.2px,color:#8CF7B0
+    classDef data  fill:#062313,stroke:#FFE9A8,stroke-width:1.5px,color:#FFE9A8
+    class CORE,AXON,FIRE impl
+    class QMNET,XSIG,GEN exp
+    class RTANA,UNI,BRIDGE notes
+    class DATA,PORTAL data
 ```
 
-<div align="center"><img src="https://raw.githubusercontent.com/QHDALabs/QHDALabs/main/assets/qhda-divider.svg" alt="" width="100%" /></div>
+**Trust boundaries.** All external data enters through fetch scripts that pin and checksum what
+they download (wildfire FIRMS downloads are validated atomically with SHA-256 across 73 five-day
+windows for 2025). Quantum work runs on local Qiskit Aer simulators only — no cloud QPU
+credentials are used anywhere in the public code. Genesis-Protocol calls an external LLM API and
+World ID from the browser; it is a local prototype and must not be treated as a deployed system.
 
-## `▚` ACTIVE NODES
+---
 
-<table>
-<tr><th align="left">node</th><th align="left">what it is</th><th>stack</th><th>commits</th><th>online</th></tr>
+## Reproducing the work
 
-<tr><td><a href="https://github.com/QHDALabs/QHDALabs-Axon"><b>QHDALabs-Axon</b></a></td>
-<td>The <i>Science Nervous System</i> — relational infrastructure over the scientific literature. Relation as the unit, verification before discovery.</td>
-<td><img src="https://img.shields.io/badge/Python-229KB-00ff41?style=flat-square&labelColor=0d1117" /></td>
-<td align="center">37</td><td align="center">2026-06</td></tr>
+Each repository is self-contained. The three fastest independent checks:
 
-<tr><td><a href="https://github.com/QHDALabs/QHDALabs-RTANA"><b>QHDALabs-RTANA</b></a></td>
-<td>Relational Temporal Awareness in Neural Architectures — can a neural system have an internal relational clock? Page–Wootters × Rovelli × Qiskit.</td>
-<td><img src="https://img.shields.io/badge/Python%20%C2%B7%20Qiskit-29KB-00ff41?style=flat-square&labelColor=0d1117" /></td>
-<td align="center">40</td><td align="center">2026-05</td></tr>
+**1. Reproduce Axon's null result and its pre-registered failure** (~5 min):
 
-<tr><td><a href="https://github.com/QHDALabs/QHDALabs-XSIG"><b>QHDALabs-XSIG</b></a></td>
-<td>Cross-cycle Structural Information Geometry.</td>
-<td><img src="https://img.shields.io/badge/Python-169KB-00ff41?style=flat-square&labelColor=0d1117" /></td>
-<td align="center">11</td><td align="center">2026-06</td></tr>
-
-<tr><td><a href="https://github.com/QHDALabs/qmnet"><b>qmnet</b></a> ⭐</td>
-<td>How much control do we have over <i>where</i> quantum information goes — and <i>when</i>?</td>
-<td><img src="https://img.shields.io/badge/Python-139KB-00ff41?style=flat-square&labelColor=0d1117" /></td>
-<td align="center">14</td><td align="center">2026-05</td></tr>
-
-<tr><td><a href="https://github.com/QHDALabs/qhda-core"><b>qhda-core</b></a></td>
-<td>The kernel. Relational primitives every other node imports.</td>
-<td><img src="https://img.shields.io/badge/Python-28KB-FFE9A8?style=flat-square&labelColor=0d1117" /></td>
-<td align="center">3</td><td align="center">2026-06</td></tr>
-
-<tr><td><a href="https://github.com/QHDALabs/qhda-coherence-bridge"><b>qhda-coherence-bridge</b></a></td>
-<td>Coherence-layer abstraction between relational quantum models and executable substrates. <b>Node #0</b> — where it all started.</td>
-<td><img src="https://img.shields.io/badge/spec-design-FFE9A8?style=flat-square&labelColor=0d1117" /></td>
-<td align="center">3</td><td align="center">2026-03</td></tr>
-
-<tr><td><a href="https://github.com/QHDALabs/QHDALabs-Universe"><b>QHDALabs-Universe</b></a></td>
-<td>Global Research Initiative for Precision Cosmology &amp; Emergent Systems.</td>
-<td><img src="https://img.shields.io/badge/Python-6KB-00ff41?style=flat-square&labelColor=0d1117" /></td>
-<td align="center">9</td><td align="center">2026-04</td></tr>
-
-<tr><td><a href="https://github.com/QHDALabs/QHDALabs-Genesis-Protocol"><b>Genesis-Protocol</b></a></td>
-<td>Open platform for crowdsourcing ethical consensus for the first Safe-by-Design Quantum Hardware Module (Q-HSM). Defining the <i>Golden Rule</i> for AI.</td>
-<td><img src="https://img.shields.io/badge/JavaScript-27KB-00C8A0?style=flat-square&labelColor=0d1117" /></td>
-<td align="center">23</td><td align="center">2026-05</td></tr>
-
-<tr><td><a href="https://github.com/QHDALabs/QHDALabs-wildfire-risk-pl"><b>wildfire-risk-pl</b></a></td>
-<td>Real-time wildfire risk prediction for Poland. The largest codebase in the lab — research that touches the ground.</td>
-<td><img src="https://img.shields.io/badge/Python%20%C2%B7%20HTML-738KB-00C8A0?style=flat-square&labelColor=0d1117" /></td>
-<td align="center">41</td><td align="center">2026-05</td></tr>
-
-<tr><td><a href="https://github.com/QHDALabs/qhdalabs.github.io"><b>qhdalabs.github.io</b></a></td>
-<td>Official research portal &amp; papers index → <a href="https://qhdalabs.github.io">live</a></td>
-<td><img src="https://img.shields.io/badge/HTML%20%C2%B7%20Pages-81KB-0BD45E?style=flat-square&labelColor=0d1117" /></td>
-<td align="center">22</td><td align="center">2026-05</td></tr>
-
-<tr><td><a href="https://github.com/QHDALabs/Multiverse-Theory"><b>Multiverse-Theory</b></a></td>
-<td>Research fork focused on advanced cosmological models.</td>
-<td><img src="https://img.shields.io/badge/TeX-38KB-8CF7B0?style=flat-square&labelColor=0d1117" /></td>
-<td align="center">48</td><td align="center">2026-04</td></tr>
-
-<tr><td><a href="https://github.com/QHDALabs/QHDALabs"><b>QHDALabs</b></a></td>
-<td>This node. Profile, ecosystem entry point &amp; the digital garden below.</td>
-<td><img src="https://img.shields.io/badge/HTML%20%C2%B7%20Markdown-48KB-0BD45E?style=flat-square&labelColor=0d1117" /></td>
-<td align="center">27</td><td align="center">2026-04</td></tr>
-</table>
-
-### `▚` ENCRYPTED NODES
-
-```
-  ┌────────────────────────────────────────────────────────────────────────┐
-  │  9 private repositories · 2026-04 → 2026-07 · 71 commits               │
-  │                                                                        │
-  │  ██████████████  policy & regulatory engineering    [ CLASSIFIED ]     │
-  │  ██████████████  industrial / energy systems        [ CLASSIFIED ]     │
-  │  ██████████████  cognitive security research        [ CLASSIFIED ]     │
-  │  ██████████████  transparency & governance tooling  [ CLASSIFIED ]     │
-  │  ██████████████  floating research laboratory       [ CLASSIFIED ]     │
-  │                                                                        │
-  │  status: incubating — surfaces when it survives verification.          │
-  └────────────────────────────────────────────────────────────────────────┘
+```bash
+git clone https://github.com/QHDALabs/QHDALabs-Axon && cd QHDALabs-Axon
+pip install "git+https://github.com/QHDALabs/qhda-core.git" && pip install .
+python examples/mvp_proximity_null.py      # expect: 0 relations survive BH-FDR
+python examples/abc_bridge_recovery.py     # expect: Raynaud/fish-oil recovered, p_random≈0.0345
+python examples/migraine_magnesium_heldout.py  # expect: NULL verdict, p_random≈0.1214
+pytest
 ```
 
-<div align="center"><img src="https://raw.githubusercontent.com/QHDALabs/QHDALabs/main/assets/qhda-divider.svg" alt="" width="100%" /></div>
+**2. Reproduce the quantum bridge and RQTE experiments** (~11 min, ideal simulator):
 
-## `▚` DIGITAL GARDEN
+```bash
+pip install "qiskit>=1.0" "qiskit-aer>=0.13" numpy scipy matplotlib
+git clone https://github.com/QHDALabs/qmnet && cd qmnet
+python qmnet_v3.py     # expect: P_ret = 0.000 at T=2,4 in the m=1 branch
+python rqte_v3.py      # expect: correct decrypt in all 3 modes; BUTTERFLY entropy ≈0.811
+```
 
-Ongoing research, thinking and technical documentation — grown in public.
+**3. Run the wildfire pipeline without credentials** (stub mode, ~2 min):
+
+```bash
+git clone https://github.com/QHDALabs/QHDALabs-wildfire-risk-pl && cd QHDALabs-wildfire-risk-pl/v5
+pip install -r requirements.txt
+python qhdalabs_wildfire_ignition_v1.py --stub   # synthetic inputs, no API key needed
+pytest
+```
+
+Live FIRMS ingestion needs a free NASA `FIRMS_MAP_KEY`. Two of the seven wildfire layers
+(ARiMR LPIS, IBL KSIPL) have no automated source and must be imported manually — so a full
+end-to-end run is **not** reproducible from a clean checkout without those files. This is a real
+gap, stated rather than hidden.
+
+---
+
+## Limitations
+
+Stated plainly, because an evaluator will find them anyway:
+
+- **No peer review.** No output has been through external review or publication. The technical
+  notes in `qmnet` and `wildfire-risk-pl` are self-published PDFs.
+- **No physical quantum hardware.** Every quantum result is from a noise-free Qiskit Aer
+  simulator. No noise model has been applied; no QPU run has happened. Scaling beyond 5 qubits is
+  untested.
+- **RQTE is not cryptography yet.** No security proof, no attacker model, no NIST SP 800-22
+  randomness testing. It is a construction that encrypts and decrypts correctly in simulation.
+- **Axon's bridge gate does not generalise.** It works for closed discovery in-sample and fails
+  on the pre-registered held-out case and on sibling-literature separation. Development is halted
+  at that boundary by design.
+- **XSIG is limited by window count.** 16 observational windows is acknowledged as insufficient;
+  shared instrumental systematics across the five channels cannot be excluded; BAO enters through
+  a parametric model rather than raw data.
+- **Wildfire validation is partial.** Coverage-gating and EFFIS comparison exist; there is no
+  published skill score against a held-out fire season, and the pipeline covers one voivodeship.
+- **Single operator, no institutional affiliation.** No lab partners, no funding, no external
+  replication of any result.
+- **Three repositories contain no code at all** (RTANA, Universe, coherence-bridge). They are
+  labelled as such above.
+
+---
+
+## Roadmap
+
+| Horizon | Work | Depends on |
+|---|---|---|
+| **Done** | Axon MVP pipeline + two verifiers + pre-registration protocol · wildfire v1→v5 · qmnet three experiments · XSIG null result · qhda-core extraction | — |
+| **Now** | Axon: repair or replace the sibling-separation gate that failed Tier-0 · wildfire: skill scoring against a held-out season | Existing code |
+| **Next** | NIST SP 800-22 on the RQTE keystream · qmnet under a realistic noise model · first QPU run (IBM Heron target) of the 4-step variant · extend wildfire beyond Lower Silesia | Compute + QPU access |
+| **Research** | RTANA: turn the manifesto into an architecture proposal and a falsifiable evaluation protocol · XSIG with more observational windows · relational primitives as a shared substrate across the above | Open questions, not scheduled |
+
+Nothing in the *Next* or *Research* rows is claimed to exist.
+
+---
+
+## Digital garden
+
+Working notes and long-form write-ups, published as they are written.
 
 | | |
 |---|---|
-| 🌱 [**Technical Blog**](./digital-garden/blog/) | Deep dives, essays and long-form articles — AGI futures, relational time, the knowledge conflict with AI. |
-| 🔬 [**R&D Notes**](./digital-garden/research/) | [Quantum](./digital-garden/research/qhda-quantum/) (Qiskit) · [Relational](./digital-garden/research/qhda-relational/) (time emergence) · [Energy](./digital-garden/research/qhda-energy/) systems. |
-| 📓 [**Knowledge Base**](./digital-garden/notes/) | Practical notes — ISO 27001, security architecture, perspectives on AGI partnership. |
-| 📡 [**News**](./digital-garden/news/) | Project status, milestones, new nodes coming online. |
+| 🌱 [**Blog**](./digital-garden/blog/) | [RQTE v3.0 — when measurement creates time](./digital-garden/blog/blog-rqte-v3.md) (the full experimental write-up, including the result that went the wrong way) · [infrastructure notes](./digital-garden/blog/2026-05-21-genesis-digital-garden.md) · [AGI notes](./digital-garden/blog/2026-05-21-future-of-agi.md) |
+| 🔬 [**Research notes**](./digital-garden/research/) | [Quantum](./digital-garden/research/qhda-quantum/) · [Relational time](./digital-garden/research/qhda-relational/) · [Energy](./digital-garden/research/qhda-energy/) |
+| 📓 [**Knowledge base**](./digital-garden/notes/) | [ISO 27001 / ISMS practice notes](./digital-garden/notes/security-iso27001.md) |
+| 📡 [**News**](./digital-garden/news/) | Release notes and status updates |
 
-<div align="center"><img src="https://raw.githubusercontent.com/QHDALabs/QHDALabs/main/assets/qhda-divider.svg" alt="" width="100%" /></div>
+Published via GitHub Pages ([workflow](./.github/workflows/deploy.yml)) → [qhdalabs.github.io](https://qhdalabs.github.io)
 
-## `▚` SIGNAL ANALYSIS
+---
 
-Measured across **all 21 repositories** — public and private.
+## Domains and stack
 
-```text
-LANGUAGE DISTRIBUTION                                            1.96 MB total
-──────────────────────────────────────────────────────────────────────────────
-Python       █████████████████████████████████████░░░░░░░░░░░░░   74.30 %  1458 KB
-HTML         █████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   18.68 %   367 KB
-TeX          ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░    3.19 %    63 KB
-JavaScript   █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░    2.10 %    41 KB
-PowerShell   ▌░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░    0.92 %    18 KB
-Shell        ▌░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░    0.48 %     9 KB
-CSS          ▌░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░    0.25 %     5 KB
-Make/Batch/Perl ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░    0.07 %     1 KB
-──────────────────────────────────────────────────────────────────────────────
-nodes 21  ·  public 12  ·  encrypted 9  ·  commits 349  ·  uptime since 2026-02-25
-```
+**Python** (Qiskit · NumPy · SciPy · pandas · NetworkX · GeoPandas · scikit-learn/SHAP) ·
+**JavaScript/React** · **TeX** · **GitHub Actions** · **GitHub Pages**
 
-```text
-NODE GENESIS — first five months
-──────────────────────────────────────────────────────────────────────────────
-2026-02  ◦                  account genesis — the lab wakes up
-2026-03  █                  1   qhda-coherence-bridge
-2026-04  █████              5   Universe · Multiverse · QHDALabs · +2 encrypted
-2026-05  █████              5   Genesis-Protocol · wildfire-risk-pl · qmnet
-                                RTANA · qhdalabs.github.io
-2026-06  ███                3   XSIG · qhda-core · Axon      ← the kernel lands
-2026-07  ███████            7   all encrypted                ← the lab goes dark
-──────────────────────────────────────────────────────────────────────────────
-```
+| Quantum & relational | Scientific inference | Applied risk systems | Security |
+|---|---|---|---|
+| Relational quantum mechanics (Rovelli, Page–Wootters) · mid-circuit measurement as conditional structure · decoherence routing · hybrid quantum–classical | Null-model design · multiple-testing correction · pre-registration · literature-based discovery (Swanson ABC) | Geospatial fusion · satellite ingestion (Sentinel-2 NDWI, FIRMS) · graph topology over infrastructure · explainability (SHAP) | ISMS / ISO 27001 practice · supply-chain hygiene (pinned, checksummed data fetches) |
+
+---
+
+## Collaboration
+
+Open to collaboration with researchers, engineers, institutions and reviewers — particularly on
+external replication, noise-model and QPU access for `qmnet`, and validation data for the wildfire
+pipeline.
+
+If you find an error in any result here, please open an issue on the relevant repository. Negative
+findings about this work are as welcome as positive ones.
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/QHDALabs/QHDALabs/main/assets/qhda-stats.svg" alt="Lab telemetry" width="100%" />
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=QHDALabs&hide_border=true&background=0D1117&stroke=00FF41&ring=00FF41&fire=FFE9A8&currStreakNum=EAFFF1&sideNums=EAFFF1&currStreakLabel=00FF41&sideLabels=8CF7B0&dates=4C9E63" alt="Streak" height="170" />
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=QHDALabs&bg_color=0D1117&color=8CF7B0&title_color=00FF41&line=00FF41&point=FFE9A8&area=true&area_color=00FF41&hide_border=true" alt="Activity graph" width="100%" />
-
-</div>
-
-<div align="center"><img src="https://raw.githubusercontent.com/QHDALabs/QHDALabs/main/assets/qhda-divider.svg" alt="" width="100%" /></div>
-
-## `▚` ARSENAL
-
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=python,anaconda,pytorch,tensorflow,flask,fastapi,js,html,css,latex,powershell,bash,git,github,githubactions,docker,linux,vscode,markdown,sqlite&perline=10" alt="Tech stack" />
-
-<br/><br/>
-
-![Qiskit](https://img.shields.io/badge/Qiskit-quantum%20circuits-6929C4?style=for-the-badge&labelColor=0d1117&logo=qiskit&logoColor=00ff41)
-![NumPy](https://img.shields.io/badge/NumPy-numerics-013243?style=for-the-badge&labelColor=0d1117&logo=numpy&logoColor=00ff41)
-![SciPy](https://img.shields.io/badge/SciPy-simulation-8CAAE6?style=for-the-badge&labelColor=0d1117&logo=scipy&logoColor=00ff41)
-![Pandas](https://img.shields.io/badge/pandas-data-150458?style=for-the-badge&labelColor=0d1117&logo=pandas&logoColor=00ff41)
-![NetworkX](https://img.shields.io/badge/NetworkX-graphs-2C5BB4?style=for-the-badge&labelColor=0d1117&logo=graphql&logoColor=00ff41)
-![Pages](https://img.shields.io/badge/GitHub%20Pages-publishing-222222?style=for-the-badge&labelColor=0d1117&logo=githubpages&logoColor=00ff41)
-![ISO27001](https://img.shields.io/badge/ISO%2027001-security-EF3B2D?style=for-the-badge&labelColor=0d1117&logo=shieldsdotio&logoColor=00ff41)
+<a href="https://qhdalabs.com"><img src="https://img.shields.io/badge/qhdalabs.com-00ff41?style=for-the-badge&logo=firefoxbrowser&logoColor=0d1117&labelColor=0d1117&color=00ff41" alt="Website" /></a>
+<a href="https://qhdalabs.github.io"><img src="https://img.shields.io/badge/research%20portal-0d1117?style=for-the-badge&logo=githubpages&logoColor=00ff41&labelColor=0d1117&color=8CF7B0" alt="Research portal" /></a>
+<a href="mailto:contact@qhdalabs.com"><img src="https://img.shields.io/badge/contact@qhdalabs.com-0d1117?style=for-the-badge&logo=protonmail&logoColor=FFE9A8&labelColor=0d1117&color=FFE9A8" alt="Email" /></a>
+<a href="https://github.com/QHDALabs?tab=repositories"><img src="https://img.shields.io/badge/all%20repositories-0d1117?style=for-the-badge&logo=github&logoColor=00C8A0&labelColor=0d1117&color=00C8A0" alt="Repositories" /></a>
 
 </div>
 
-### Core domains
+---
 
-<table>
-<tr>
-<td width="25%" valign="top">
+<details>
+<summary><b>Lab principles</b> — the working rules behind the method above</summary>
 
-**⚛ Quantum**
-- Architectures & algorithms
-- Decoherence mitigation
-- Hybrid quantum–classical
-- Relational quantum mechanics
-
-</td>
-<td width="25%" valign="top">
-
-**🧠 Artificial Intelligence**
-- Autonomous reasoning
-- Human–AI cooperation
-- AI for industry & infra
-- Strategic AI applications
-
-</td>
-<td width="25%" valign="top">
-
-**🛡 Infrastructure**
-- Critical infra modernization
-- Cybersecurity architecture
-- Industrial automation
-- Energy & resilience
-
-</td>
-<td width="25%" valign="top">
-
-**🔭 Frontier Science**
-- Emergent spacetime
-- Information-based physics
-- Computational cosmology
-- High-risk / high-reward
-
-</td>
-</tr>
-</table>
-
-<div align="center"><img src="https://raw.githubusercontent.com/QHDALabs/QHDALabs/main/assets/qhda-divider.svg" alt="" width="100%" /></div>
-
-## `▚` KOANS
+<br/>
 
 > **`01`** &nbsp; *Do not bend the spoon. Bend the model until it predicts the spoon.*
 >
@@ -305,39 +297,21 @@ NODE GENESIS — first five months
 >
 > **`06`** &nbsp; *Think in decades. Ship on Tuesdays.*
 
-<div align="center"><img src="https://raw.githubusercontent.com/QHDALabs/QHDALabs/main/assets/qhda-divider.svg" alt="" width="100%" /></div>
+These are not decoration. `02` is why `VERIFICATION_LOG.md` exists and why the Tier-0 failure
+stopped development instead of being re-scoped. `03` is the shared thesis across `qhda-core`,
+`qmnet` and `Axon`. `06` is why an operational wildfire pipeline sits next to cosmology.
 
-## `▚` STRATEGIC VISION
+**Long-term direction.** Quantum computation, machine intelligence, energy and infrastructure
+resilience are converging. QHDALabs works at that intersection with a deliberately narrow method:
+build the smallest verifiable thing, test it against an explicit null, publish what happened.
+That direction is an intention, not a capability claim.
 
-The coming decades will be defined by the convergence of **quantum computation**, **artificial
-intelligence**, **energy transformation**, **autonomous systems**, **space-scale engineering** and
-**civilizational resilience**. Those who understand and integrate these domains early will help
-define the next era.
-
-**Long-term goals**
-
-- Build globally relevant deep-tech IP
-- Develop breakthrough quantum–AI systems
-- Support resilient civilization-scale infrastructure
-- Contribute to frontier science
-- Create technologies worthy of the future
-
-## `▚` ESTABLISH CONNECTION
-
-QHDALabs welcomes collaboration with researchers, engineers, strategic institutions, investors,
-visionary builders and frontier organizations.
+</details>
 
 <div align="center">
 
-<a href="https://qhdalabs.com"><img src="https://img.shields.io/badge/qhdalabs.com-00ff41?style=for-the-badge&logo=firefoxbrowser&logoColor=0d1117&labelColor=0d1117&color=00ff41" alt="Website" /></a>
-<a href="https://qhdalabs.github.io"><img src="https://img.shields.io/badge/research%20portal-0d1117?style=for-the-badge&logo=githubpages&logoColor=00ff41&labelColor=0d1117&color=8CF7B0" alt="Research portal" /></a>
-<a href="mailto:contact@qhdalabs.com"><img src="https://img.shields.io/badge/contact@qhdalabs.com-0d1117?style=for-the-badge&logo=protonmail&logoColor=FFE9A8&labelColor=0d1117&color=FFE9A8" alt="Email" /></a>
-<a href="https://github.com/QHDALabs?tab=repositories"><img src="https://img.shields.io/badge/all%20nodes-0d1117?style=for-the-badge&logo=github&logoColor=00C8A0&labelColor=0d1117&color=00C8A0" alt="Repositories" /></a>
-
-<br/><br/>
-
 <img src="https://raw.githubusercontent.com/QHDALabs/QHDALabs/main/assets/qhda-footer.svg" alt="Think deep. Build bold. Scale civilizations." width="100%" />
 
-<sub><code>Phase 1: Foundation &amp; Public Buildout — this is only the beginning.</code></sub>
+<sub>MIT licensed (this repository) · © 2026 Krzysztof W. Banasiewicz</sub>
 
 </div>

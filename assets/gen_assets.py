@@ -178,7 +178,7 @@ DEFS = """
 # ==========================================================================
 # 1. BANNER
 # ==========================================================================
-def banner(path, nodes, commits, code_mb, since):
+def banner(path, hud, since):
     W, H = 1200, 460
     s = io.StringIO()
     s.write(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
@@ -235,10 +235,10 @@ def banner(path, nodes, commits, code_mb, since):
     s.write(f'    <text class="hud" x="34" y="38">root@qhdalabs:~$ ./wake_up.sh'
             f'<tspan class="caret" dx="8">&#9608;</tspan></text>\n')
     s.write(f'    <text class="hud" x="{W-34}" y="38" text-anchor="end">'
-            f'NODES {nodes} &#183; COMMITS {commits} &#183; CODE {code_mb} &#183; SINCE {since}</text>\n')
+            f'{hud} &#183; SINCE {since}</text>\n')
     s.write('    <text class="title flicker" x="600" y="110">QHDALabs</text>\n')
     s.write('    <text class="sub" x="600" y="139">'
-            'STRATEGIC AI &#183; QUANTUM SYSTEMS &#183; CIVILIZATIONAL INFRASTRUCTURE</text>\n')
+            'RELATIONAL QUANTUM MODELS &#183; VERIFIED INFERENCE &#183; APPLIED RISK SYSTEMS</text>\n')
     # sygnatura na dole
     s.write('    <text class="hud" x="600" y="447" text-anchor="middle" opacity=".55">'
             '&#12467;&#12540;&#12489;&#12399;&#36947;&#12391;&#12354;&#12427; '
@@ -337,20 +337,23 @@ def footer(path, motto):
 # ==========================================================================
 # 4. PANEL TELEMETRII — kafelki + pierscien jezykow
 # ==========================================================================
-LANGS = [  # (nazwa, procent, kolor)
-    ("Python",     74.30, "#00FF41"),
-    ("HTML",       18.68, "#00C8A0"),
-    ("TeX",         3.19, "#FFE9A8"),
-    ("JavaScript",  2.10, "#8CF7B0"),
-    ("PowerShell",  0.92, "#4C9E63"),
-    ("other",       0.81, "#2F6B45"),
+# Sklad 12 publicznych repozytoriow wg realnego stanu (patrz docs/EVIDENCE.md).
+# Kazda kategoria jest sprawdzalna przez inspekcje drzewa plikow repozytorium.
+MIX = [  # (etykieta, liczba repo, kolor)
+    ("implemented + tested", 3, "#00FF41"),
+    ("experimental code",    3, "#00C8A0"),
+    ("notes / spec only",    3, "#4C9E63"),
+    ("infrastructure",       2, "#FFE9A8"),
+    ("upstream fork",        1, "#2F6B45"),
 ]
+TOTAL_REPOS = sum(n for _, n, _ in MIX)
 
+# Wylacznie liczby weryfikowalne z publicznych zrodel.
 TILES = [
-    ("21",      "NODES"),       ("12",   "PUBLIC"),
-    ("9",       "ENCRYPTED"),   ("349",  "COMMITS"),
-    ("1.96 MB", "CODEBASE"),    ("10",   "LANGUAGES"),
-    ("74.3%",   "PYTHON"),      ("2026-02", "UPTIME SINCE"),
+    ("12",  "PUBLIC REPOS"),      ("3",  "TEST SUITES"),
+    ("4",   "TECHNICAL NOTES"),   ("2",  "PRE-REGISTERED"),
+    ("3",   "PUBLISHED NULLS"),   ("0",  "PEER-REVIEWED"),
+    ("0",   "QPU RUNS"),          ("2026-02", "ACTIVE SINCE"),
 ]
 
 
@@ -388,7 +391,7 @@ def stats(path, generated):
     s.write(f'    <rect width="{W}" height="{H}" fill="#010604" opacity=".55"/>\n')
     # pasek naglowka
     s.write('    <path d="M 0 44 H 1200" stroke="#00FF41" stroke-opacity=".3" stroke-width="1"/>\n')
-    s.write('    <text class="hdr" x="30" y="29">&#9622; LAB TELEMETRY</text>\n')
+    s.write('    <text class="hdr" x="30" y="29">&#9622; PUBLIC EVIDENCE SNAPSHOT</text>\n')
     s.write(f'    <text class="hdr dim" x="{W-30}" y="29" text-anchor="end">'
             f'snapshot {generated} &#183; regenerate: python assets/gen_assets.py</text>\n')
     # kafelki 4x2
@@ -407,8 +410,8 @@ def stats(path, generated):
     s.write(f'    <circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="#0a2415" '
             f'stroke-width="{sw}"/>\n')
     acc = 0.0
-    for name, pct, color in LANGS:
-        seg = circ * pct / 100.0
+    for name, count, color in MIX:
+        seg = circ * count / TOTAL_REPOS
         s.write(f'    <circle class="seg" cx="{cx}" cy="{cy}" r="{r}" stroke="{color}" '
                 f'stroke-width="{sw}" stroke-dasharray="0 {circ:.2f}" '
                 f'stroke-dashoffset="{-acc:.2f}" transform="rotate(-90 {cx} {cy})">\n'
@@ -418,15 +421,15 @@ def stats(path, generated):
                 f'keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/>\n'
                 f'    </circle>\n')
         acc += seg
-    s.write(f'    <text class="ctr" x="{cx}" y="{cy+2}">1.96</text>\n')
-    s.write(f'    <text class="ctr s" x="{cx}" y="{cy+20}">MB TOTAL</text>\n')
+    s.write(f'    <text class="ctr" x="{cx}" y="{cy+2}">{TOTAL_REPOS}</text>\n')
+    s.write(f'    <text class="ctr s" x="{cx}" y="{cy+20}">PUBLIC REPOS</text>\n')
     # legenda
     lx = 978
-    for i, (name, pct, color) in enumerate(LANGS):
+    for i, (name, count, color) in enumerate(MIX):
         y = 118 + i * 24
         s.write(f'    <rect x="{lx}" y="{y-9}" width="11" height="11" rx="2" fill="{color}"/>\n')
         s.write(f'    <text class="leg" x="{lx+20}" y="{y}">{name}</text>\n')
-        s.write(f'    <text class="leg pct" x="{W-30}" y="{y}" text-anchor="end">{pct:.2f}%</text>\n')
+        s.write(f'    <text class="leg pct" x="{W-30}" y="{y}" text-anchor="end">{count}</text>\n')
     s.write(f'    <rect width="{W}" height="{H}" fill="url(#scan)"/>\n')
     s.write(f'    <rect x="1" y="1" width="{W-2}" height="{H-2}" rx="13" fill="none" '
             f'stroke="#00FF41" stroke-opacity=".3" stroke-width="1.4"/>\n')
@@ -434,8 +437,9 @@ def stats(path, generated):
     open(path, "w", encoding="utf-8").write(s.getvalue())
 
 
-banner(os.path.join(OUT, "qhda-banner.svg"), nodes=21, commits=349, code_mb="1.96MB", since="2026-02")
-stats(os.path.join(OUT, "qhda-stats.svg"), generated="2026-08-04")
+banner(os.path.join(OUT, "qhda-banner.svg"),
+       hud="12 PUBLIC REPOS &#183; 3 TEST SUITES &#183; 0 PEER-REVIEWED", since="2026-02")
+stats(os.path.join(OUT, "qhda-stats.svg"), generated="2026-08-10")
 divider(os.path.join(OUT, "qhda-divider.svg"))
 footer(os.path.join(OUT, "qhda-footer.svg"),
        "THINK DEEP &#183; BUILD BOLD &#183; SCALE CIVILIZATIONS")
