@@ -30,7 +30,8 @@ Status vocabulary used throughout:
 | 12 public repositories | GitHub API `public_repos: 12` | `curl https://api.github.com/users/QHDALabs` | VERIFIED |
 | Active since 2026-02 | Account `created_at: 2026-02-25` | same | VERIFIED |
 | Single operator, no institutional affiliation | Account type `User`; all repos owned by one account; no org members | GitHub UI / API | VERIFIED |
-| 1 of the 12 public repositories is a fork (`Multiverse-Theory`) whose commits are upstream work | API `fork: true` on that repo | `curl .../repos/QHDALabs/Multiverse-Theory` | VERIFIED |
+| Research activity predates the QHDALabs account by ~10 months | Earliest `Multiverse-Theory` commit 2025-04-17; account created 2026-02-25 | `curl .../repos/QHDALabs/Multiverse-Theory/commits` | VERIFIED |
+| `Multiverse-Theory` is a **self-fork**, not a fork of a third party — parent is the operator's own personal account `krzyshtoof/Multiverse-Theory`, and all 20 commits are the operator's across both accounts | API `fork: true`, `parent.full_name: krzyshtoof/Multiverse-Theory`; commit authors are `Krzysztof W. Banasiewicz` / `krzysztof` / `krzyshtoof` | `curl .../repos/QHDALabs/Multiverse-Theory` and `.../commits`; compare author identities | VERIFIED |
 | Additional private repositories exist | — | Not inspectable by definition | NOT VERIFIABLE — **no claims are made about them and nothing in the public presentation depends on them** |
 | Any aggregate statistic spanning private repos (total commits, total code volume, language shares) | — | — | NOT VERIFIABLE — **such figures have been removed from the public presentation** |
 | Peer-reviewed publications | None | Search | VERIFIED: **zero** |
@@ -143,7 +144,46 @@ Listed here so they are not mistaken for capability.
 | **QHDALabs-Universe** | README only, marked "init alpha". Names five intended sub-projects (cosmoaudit, photon-engine, h0lab, reltime, cosmohub) and a technology stack. **No implementations, datasets or results.** | CONCEPTUAL |
 | **qhda-coherence-bridge** | ~9 KB design note, earliest repository in the lab (2026-03). Superseded in practice by `qhda-core`. | CONCEPTUAL |
 | **QHDALabs-Genesis-Protocol** | React frontend + LLM integration + World ID that runs locally via `npm run dev`. **No public deployment.** The Q-HSM hardware module has no silicon; the distributed vote ledger is unbuilt. | EXPERIMENTAL (local prototype) — hardware and ledger CONCEPTUAL |
-| **Multiverse-Theory** | Fork of an upstream TeX project. Commit count and content are **not QHDALabs output**. | NOT LAB OUTPUT |
+*(`Multiverse-Theory` was previously listed here. It is not a no-implementation repository — see
+section 7a below.)*
+
+---
+
+## 7a. Multiverse-Theory — research origin and algorithmic lineage
+
+Repo: <https://github.com/QHDALabs/Multiverse-Theory> · original work 2025-04 → 2025-09, brought
+under QHDALabs 2026-04.
+
+This is where the lab's ideas come from. It is offered as **provenance for the algorithms, not as
+validation of them** — the claims that carry weight are in the implemented components in sections
+2–6, which can be run.
+
+| Capability / claim | Repository evidence | Verification method | Status |
+|---|---|---|---|
+| Theoretical work predates the lab by ~10 months | Earliest commit 2025-04-17; QHDALabs account created 2026-02-25 | Compare commit dates to account `created_at` | VERIFIED |
+| Self-fork of the operator's own account, not third-party work | `parent.full_name: krzyshtoof/Multiverse-Theory`; all 20 commits authored by the operator across both accounts | `curl .../commits` and compare author identities | VERIFIED |
+| Substantial theoretical corpus, not a placeholder | ~40 documents under `docs/` — `models/` (emergent time, decoherence, formalism, topological entanglement, gravity), `concepts/` (virtual qubit, ψ-connection, atemporal quantum space), `predictions/`, `assumptions/` | Read the tree | VERIFIED |
+| Contains executable simulations, not only prose (GitHub labels the repo TeX by byte count, which understates this) | `simulations/qqc.py`, `time_shifted_clock.py`, `time_shift_clock.py`, `virtual_quantum.py`, `wodor.py`, `wodor2.py` (Qiskit / NumPy) | Read and run | PARTIALLY VERIFIED — runnable, but no test suite and no published result set |
+| Preprint sources exist | `preprints/mass_as_information.tex`, `photon_information_carrier.tex`, `psi_connection_arxiv.tex`; `paper/main.tex` + `refs.bib` | Build with the included LaTeX CI | VERIFIED (sources exist) |
+| **The qmnet preprint source lives in this repository** — the theory→algorithm bridge is a file | `notebooks/preprint_qmnet.tex`, `preprint_qmnet.bib`, `preprint_qmnet.pdf` | Read it against the [qmnet](https://github.com/QHDALabs/qmnet) code | VERIFIED — **strongest single lineage artifact** |
+| Automated builds | `.github/workflows/latex.yml`, `.github/workflows/latex-preprint.yml` (texlive container + latexmk cache) | Actions history | VERIFIED |
+| Citation and archival metadata prepared | `CITATION.cff`, `.zenodo.json`, `AUTHORS.md`, `CHANGELOG.md`, `zenodo/` (4 PDFs) | Read | VERIFIED that metadata exists — **no DOI is visible in the repository; if a Zenodo deposit exists it should be surfaced, and if not, depositing is the cheapest credibility gain available** |
+| Repository hygiene | `SECURITY.md`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, issue/PR templates, `DOC_LICENSE.md`, `docs/CC-BY-4.0.md`, RCSAL v2.0 licence | Read | VERIFIED |
+| Any theoretical claim in `docs/` is established physics | — | Not peer-reviewed; not experimentally tested; several documents are explicitly speculative | **CONCEPTUAL — no validation claimed** |
+| Empirical predictions have been tested | `predictions/cmb_anomalies.md`, `docs/predictions/empirical.md` state predictions | XSIG tested one adjacent line and returned a **null** | **NOT VALIDATED** — and the one nearby test was negative |
+
+### Traceable lineage
+
+| Origin artifact (2025) | Descendant | Link |
+|---|---|---|
+| `docs/models/emergent_time.md`, `emergent_time_decoherence.md` | `qhda-core/src/qhda_core/emergent/clock.py` | Clock primitive implements the emergent-time model |
+| `docs/concepts/virtual_qubit.md`, `simulations/time_shifted_clock.py`, `qqc.py` | `qmnet` star-topology clock tick used in RQTE | Shared star-topology construction for deriving a per-step tick |
+| `notebooks/preprint_qmnet.tex` | `qmnet` | Preprint source for the downstream repository |
+| `docs/models/time_theory.md` | `QHDALabs-RTANA` | Same relational-time question, restated for neural architectures |
+| `docs/models/topological_entanglement.md`, quantum-graph material | `qhda-core/relational/state.py` → Axon, wildfire topology | "Relation is the unit" applied to literature and infrastructure graphs |
+
+An evaluator should read this section as answering *"where did these algorithms come from?"* — not
+as an additional set of results. The theory is unvalidated and is labelled as such.
 
 ---
 
@@ -159,7 +199,7 @@ not be verified, were misleading, or were theatrical rather than technical.
 | Language distribution "1.96 MB across all 21 repositories" | Spans private repositories; unverifiable. Removed. |
 | "the lab goes dark" / "surfaces when it survives verification" | Theatre. Communicated nothing technical and implied hidden capability. |
 | RTANA badged as "Python · Qiskit, 29 KB" | **The repository contains no Python and no Qiskit code.** Corrected to "research notes — no code". |
-| Multiverse-Theory listed with "48 commits" alongside original work | It is a fork; those commits are upstream authors' work. Now labelled as a fork and excluded from lab output. |
+| Multiverse-Theory listed with "48 commits" alongside original work, with no explanation of what it is | The commit count did not match the repository (20 commits) and nothing indicated its role. It is now presented as what it actually is: the **2025 research origin**, a self-fork of the operator's own account, with the lineage to `qhda-core` and `qmnet` made explicit and checkable. |
 | Genesis-Protocol as an "open platform for crowdsourcing ethical consensus" | There is no public deployment. Corrected to "local prototype". |
 | Per-repository code sizes (e.g. "Axon — 229 KB") | Did not match the public API and served no evaluative purpose. Replaced by an evidence column. |
 | GitHub streak/activity badge images | The streak service (`herokuapp.com`) is defunct; the badges rendered broken. Removed. |

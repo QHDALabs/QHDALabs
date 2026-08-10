@@ -344,7 +344,7 @@ MIX = [  # (etykieta, liczba repo, kolor)
     ("experimental code",    3, "#00C8A0"),
     ("notes / spec only",    3, "#4C9E63"),
     ("infrastructure",       2, "#FFE9A8"),
-    ("upstream fork",        1, "#2F6B45"),
+    ("research origin 2025", 1, "#2F6B45"),
 ]
 TOTAL_REPOS = sum(n for _, n, _ in MIX)
 
@@ -353,7 +353,7 @@ TILES = [
     ("12",  "PUBLIC REPOS"),      ("3",  "TEST SUITES"),
     ("4",   "TECHNICAL NOTES"),   ("2",  "PRE-REGISTERED"),
     ("3",   "PUBLISHED NULLS"),   ("0",  "PEER-REVIEWED"),
-    ("0",   "QPU RUNS"),          ("2026-02", "ACTIVE SINCE"),
+    ("0",   "QPU RUNS"),          ("2025-04", "RESEARCH SINCE"),
 ]
 
 
@@ -438,7 +438,7 @@ def stats(path, generated):
 
 
 banner(os.path.join(OUT, "qhda-banner.svg"),
-       hud="12 PUBLIC REPOS &#183; 3 TEST SUITES &#183; 0 PEER-REVIEWED", since="2026-02")
+       hud="12 PUBLIC REPOS &#183; 3 TEST SUITES &#183; 0 PEER-REVIEWED", since="2025-04")
 stats(os.path.join(OUT, "qhda-stats.svg"), generated="2026-08-10")
 divider(os.path.join(OUT, "qhda-divider.svg"))
 footer(os.path.join(OUT, "qhda-footer.svg"),

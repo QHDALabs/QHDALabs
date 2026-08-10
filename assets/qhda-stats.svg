@@ -99,8 +99,8 @@
     <text class="num" x="386" y="206">0</text>
     <text class="lbl" x="386" y="226">QPU RUNS</text>
     <path d="M 554 176 V 222" stroke="#00FF41" stroke-opacity=".45" stroke-width="2"/>
-    <text class="num" x="562" y="206">2026-02</text>
-    <text class="lbl" x="562" y="226">ACTIVE SINCE</text>
+    <text class="num" x="562" y="206">2025-04</text>
+    <text class="lbl" x="562" y="226">RESEARCH SINCE</text>
     <path d="M 748 62 V 262" stroke="#00FF41" stroke-opacity=".22" stroke-width="1"/>
     <circle cx="880" cy="178" r="62" fill="none" stroke="#0a2415" stroke-width="22"/>
     <circle class="seg" cx="880" cy="178" r="62" stroke="#00FF41" stroke-width="22" stroke-dasharray="0 389.56" stroke-dashoffset="-0.00" transform="rotate(-90 880 178)">
@@ -133,7 +133,7 @@
     <text class="leg" x="998" y="190">infrastructure</text>
     <text class="leg pct" x="1170" y="190" text-anchor="end">2</text>
     <rect x="978" y="205" width="11" height="11" rx="2" fill="#2F6B45"/>
-    <text class="leg" x="998" y="214">upstream fork</text>
+    <text class="leg" x="998" y="214">research origin 2025</text>
     <text class="leg pct" x="1170" y="214" text-anchor="end">1</text>
     <rect width="1200" height="300" fill="url(#scan)"/>
     <rect x="1" y="1" width="1198" height="298" rx="13" fill="none" stroke="#00FF41" stroke-opacity=".3" stroke-width="1.4"/>

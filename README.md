@@ -10,14 +10,18 @@
 scientific-literature inference, and applied environmental risk — with negative results published
 alongside positive ones.**
 
-Operator: Krzysztof W. Banasiewicz · Poland / EU · active since 2026-02 · <contact@qhdalabs.com>
+Operator: Krzysztof W. Banasiewicz · Poland / EU · research from 2025-04, public repositories
+since 2026-02 · <contact@qhdalabs.com>
 
 ---
 
 ## Executive summary
 
-QHDALabs is a one-person independent lab with **12 public repositories**. The work spans three
-connected lines: (1) *relational quantum models* — mid-circuit measurement used as a source of
+QHDALabs is a one-person independent lab with **12 public repositories**, growing out of
+theoretical work started in **April 2025** on time and space as emergent from quantum information
+— a continuous line from that theory, through the algorithms it produced, into applied systems
+(see [Research lineage](#research-lineage)). The work spans three connected lines:
+(1) *relational quantum models* — mid-circuit measurement used as a source of
 conditional structure and emergent ordering (`qmnet`, `qhda-core`); (2) *verification-first
 scientific inference* — a pipeline that tests candidate relations against explicit null models
 before surfacing them (`QHDALabs-Axon`); (3) *applied risk systems* — an operational wildfire-risk
@@ -63,7 +67,7 @@ code) · **Spec** (design document only) · **Infrastructure** (publishing / too
 | [**qhda-coherence-bridge**](https://github.com/QHDALabs/qhda-coherence-bridge) | Earliest design note: abstraction layer between relational quantum models and executable substrates. | Spec | Design description only (~9 KB). Superseded in practice by `qhda-core`. |
 | [**qhdalabs.github.io**](https://github.com/QHDALabs/qhdalabs.github.io) | Research portal and papers index → [live](https://qhdalabs.github.io) | Infrastructure | Deployed site |
 | [**QHDALabs**](https://github.com/QHDALabs/QHDALabs) | This repository: profile, evidence documents, and the digital garden below. | Infrastructure | You are reading it |
-| [**Multiverse-Theory**](https://github.com/QHDALabs/Multiverse-Theory) | **Fork of an upstream TeX project.** Kept for reference reading. | Fork — *not lab output* | Commit history belongs to upstream authors, not to QHDALabs |
+| [**Multiverse-Theory**](https://github.com/QHDALabs/Multiverse-Theory) | **Research origin (2025).** The theoretical work the lab grew out of: time from information asymmetry, space from quantum correlations, reality as a dynamic quantum graph. Self-fork of the operator's personal account, brought under QHDALabs in 2026-04. | Theory + simulations — predates the lab | ~40 concept/model documents in `docs/`, 6 Qiskit simulation scripts in `simulations/`, 3 preprint sources in `preprints/`, LaTeX build CI, `CITATION.cff` + `.zenodo.json`. See [lineage](#research-lineage) below. |
 
 Licenses differ per repository (this one and `qmnet` are MIT; Axon is RCSAL v2.0). Check each repo.
 
@@ -73,6 +77,68 @@ asserted above can be checked against public files today.
 
 📄 Full claim-by-claim matrix: **[docs/EVIDENCE.md](./docs/EVIDENCE.md)** ·
 Per-component status and roadmap: **[docs/PROJECT_STATUS.md](./docs/PROJECT_STATUS.md)**
+
+---
+
+## Research lineage
+
+The lab is not a standing start. The implemented components descend from theoretical work begun in
+**April 2025**, ten months before the QHDALabs account was created — a continuous line from
+theory, through algorithms, to applied systems. Every arrow below is traceable to files.
+
+```mermaid
+flowchart LR
+    subgraph T["① Research origin · 2025-04 → 2025-09"]
+        MT["<b>Multiverse-Theory</b><br/>time from information asymmetry<br/>space from quantum correlations<br/>reality as a dynamic quantum graph"]
+        MT1["docs/models/emergent_time.md<br/>emergent_time_decoherence.md"]
+        MT2["docs/concepts/virtual_qubit.md<br/>simulations/time_shifted_clock.py<br/>simulations/qqc.py"]
+        MT3["notebooks/preprint_qmnet.tex<br/>preprints/mass_as_information.tex"]
+        MT --> MT1 & MT2 & MT3
+    end
+
+    subgraph A["② Algorithmic lineage · 2026-03 → 2026-06"]
+        BR["<b>qhda-coherence-bridge</b><br/>first design note"]
+        CORE["<b>qhda-core</b><br/>emergent/clock.py<br/>quantum/circuits.py<br/>relational/state.py"]
+        QM["<b>qmnet</b><br/>star-Ising clock tick<br/>conditional bridges · RQTE"]
+    end
+
+    subgraph P["③ Applications · 2026-05 →"]
+        AX["<b>Axon</b><br/>relations as the unit,<br/>verified before use"]
+        FI["<b>wildfire-risk-pl</b><br/>relational topology<br/>over real infrastructure"]
+        RT["<b>RTANA</b><br/>relational clock<br/>in neural systems"]
+    end
+
+    MT1 --> CORE
+    MT2 --> QM
+    MT3 --> QM
+    MT --> BR --> CORE
+    QM --> CORE
+    CORE --> AX
+    CORE --> FI
+    QM --> RT
+
+    classDef origin fill:#062313,stroke:#FFE9A8,stroke-width:1.5px,color:#FFE9A8
+    classDef algo   fill:#04170d,stroke:#00C8A0,stroke-width:1.5px,color:#9DFFC2
+    classDef app    fill:#04170d,stroke:#00FF41,stroke-width:2px,color:#EAFFF1
+    class MT,MT1,MT2,MT3 origin
+    class BR,CORE,QM algo
+    class AX,FI,RT app
+```
+
+| Origin artifact (2025) | Descendant | How to check the link |
+|---|---|---|
+| `docs/models/emergent_time.md`, `emergent_time_decoherence.md` | `qhda-core/src/qhda_core/emergent/clock.py` | The clock primitive implements the emergent-time model described in the 2025 documents |
+| `docs/concepts/virtual_qubit.md`, `simulations/time_shifted_clock.py`, `simulations/qqc.py` | `qmnet` — the star-topology clock tick used in RQTE | Both use a star-topology model to derive a tick that distinguishes one step from another |
+| `notebooks/preprint_qmnet.tex` / `.pdf` | [`qmnet`](https://github.com/QHDALabs/qmnet) | The qmnet preprint source sits in the theory repository — the bridge is a file, not a story |
+| `docs/models/time_theory.md`, relational-time material | [`RTANA`](https://github.com/QHDALabs/QHDALabs-RTANA) | RTANA restates the relational-time question for neural architectures |
+| `docs/models/topological_entanglement.md`, quantum-graph material | `qhda-core/relational/state.py` → Axon, wildfire graph topology | "Relation is the unit" is the shared thesis, applied to literature and to infrastructure |
+
+**What this repository is and is not.** It is a self-fork of the operator's personal account
+(`krzyshtoof/Multiverse-Theory`), brought under QHDALabs in April 2026; all commits are the
+operator's own across both accounts. It contains theoretical documents, six Qiskit simulation
+scripts and three preprint sources — **not peer-reviewed, and largely not experimentally tested.**
+It is offered as the *provenance* of the algorithms, not as validation of them. The claims that
+carry weight are the ones in the implemented components above, which can be run.
 
 ---
 
@@ -113,6 +179,7 @@ flowchart TD
     XSIG["<b>QHDALabs-XSIG</b><br/>ΛCDM residual structure search<br/><i>experimental · null result</i>"]
     GEN["<b>Genesis-Protocol</b><br/>ethical-constraint voting UI<br/><i>experimental · local only</i>"]
 
+    MT["<b>Multiverse-Theory</b><br/>theoretical origin, 2025<br/><i>theory + simulations</i>"]
     RTANA["<b>QHDALabs-RTANA</b><br/>relational time in neural nets<br/><i>research notes · no code</i>"]
     UNI["<b>QHDALabs-Universe</b><br/>cosmology umbrella<br/><i>spec / concept</i>"]
     BRIDGE["<b>qhda-coherence-bridge</b><br/>earliest design note<br/><i>spec</i>"]
@@ -120,6 +187,8 @@ flowchart TD
     DATA[("public data<br/>Planck · FIRMS · OSM<br/>BDOT10k · CLC · MEDLINE")]
     PORTAL["<b>qhdalabs.github.io</b> + this profile<br/><i>publishing</i>"]
 
+    MT -.->|emergent_time.md| CORE
+    MT -.->|virtual_qubit · preprint_qmnet| QMNET
     CORE -->|pip dependency| AXON
     CORE -->|examples/wildfire_relational.py| FIRE
     BRIDGE -.->|superseded by| CORE
@@ -143,7 +212,7 @@ flowchart TD
     classDef data  fill:#062313,stroke:#FFE9A8,stroke-width:1.5px,color:#FFE9A8
     class CORE,AXON,FIRE impl
     class QMNET,XSIG,GEN exp
-    class RTANA,UNI,BRIDGE notes
+    class RTANA,UNI,BRIDGE,MT notes
     class DATA,PORTAL data
 ```
 

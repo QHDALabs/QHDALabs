@@ -137,6 +137,34 @@ h0lab, reltime, cosmohub) and a technology stack. No implementations, datasets o
 Currently an intent statement. XSIG is the one line from this umbrella that produced actual work,
 and it lives in its own repository.
 
+### Multiverse-Theory — research origin (2025)
+
+The theoretical work the lab grew out of, begun **April 2025** — ten months before the QHDALabs
+account existed — and brought under the organisation in April 2026. A self-fork of the operator's
+personal account; all commits are his own across both accounts.
+
+Proposes that time emerges from information asymmetry, space from quantum correlations, and
+causality from stable relational structure, with reality modelled as a dynamic quantum graph.
+
+- **Contains:** ~40 theoretical documents under `docs/` (models, concepts, predictions,
+  assumptions), six Qiskit/NumPy simulation scripts under `simulations/`, three preprint sources
+  under `preprints/`, a `paper/` build, LaTeX CI, and citation/archival metadata
+  (`CITATION.cff`, `.zenodo.json`).
+- **Lineage, traceable to files:** `docs/models/emergent_time.md` → `qhda-core`'s
+  `emergent/clock.py`; `docs/concepts/virtual_qubit.md` + `simulations/time_shifted_clock.py` →
+  the star-topology clock tick in `qmnet`'s RQTE; `notebooks/preprint_qmnet.tex` → `qmnet` itself;
+  `docs/models/time_theory.md` → RTANA's question.
+- **Status: theory, unvalidated.** Not peer-reviewed. No experimental confirmation of any
+  proposed mechanism. Several documents are explicitly speculative. The simulations run but have
+  no test suite and no published result set.
+- **The one adjacent empirical test returned a null:** XSIG searched for cross-cycle structure in
+  ΛCDM residuals and found none (best p = 0.108).
+- **Correct reading:** this establishes *provenance and continuity* for the algorithms, and shows
+  the applied work is not a standing start. It does **not** add validated results, and is not
+  offered as such.
+- **Cheapest available improvement:** if the Zenodo deposit metadata has not been used to mint a
+  DOI, doing so converts a folder of PDFs into citable artifacts for a few hours' work.
+
 ### qhda-coherence-bridge — coherence-layer abstraction
 
 Earliest repository in the lab (2026-03), ~9 KB design note on abstracting between relational
@@ -173,7 +201,8 @@ Honest summary of what is missing across the whole lab:
 | No external replication by a third party | All | High |
 | No physical quantum hardware run | qmnet, qhda-core | High for any quantum claim |
 | No test suites | qmnet, XSIG, Genesis-Protocol | Medium |
-| CI exists in only one repository (Axon) | All others | Medium |
+| CI exists in two repositories only (Axon: pytest; Multiverse-Theory: LaTeX builds) | All others | Medium |
+| Theoretical corpus is unvalidated and undeposited (no DOI visible despite prepared metadata) | Multiverse-Theory | Medium — cheap to fix |
 | Two data layers require manual import | wildfire v5 | Medium (blocks clean-checkout reproduction) |
 | No held-out predictive validation | wildfire | Medium |
 | Single operator; no institutional affiliation or funding | All | Structural |
