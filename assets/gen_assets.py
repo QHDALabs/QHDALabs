@@ -353,7 +353,7 @@ TILES = [
     ("12",  "PUBLIC REPOS"),      ("3",  "TEST SUITES"),
     ("4",   "TECHNICAL NOTES"),   ("2",  "PRE-REGISTERED"),
     ("3",   "PUBLISHED NULLS"),   ("0",  "PEER-REVIEWED"),
-    ("0",   "QPU RUNS"),          ("2025-04", "RESEARCH SINCE"),
+    ("0",   "QPU RUNS"),          ("2025-04", "EARLIEST INDEXED"),
 ]
 
 

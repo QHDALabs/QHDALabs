@@ -10,17 +10,18 @@
 scientific-literature inference, and applied environmental risk — with negative results published
 alongside positive ones.**
 
-Operator: Krzysztof W. Banasiewicz · Poland / EU · research from 2025-04, public repositories
-since 2026-02 · <contact@qhdalabs.com>
+Operator: Krzysztof W. Banasiewicz · Poland / EU · research indexed from 2025-04, public
+repositories since 2026-02 · <contact@qhdalabs.com>
 
 ---
 
 ## Executive summary
 
 QHDALabs is a one-person independent lab with **12 public repositories**, growing out of
-theoretical work started in **April 2025** on time and space as emergent from quantum information
-— a continuous line from that theory, through the algorithms it produced, into applied systems
-(see [Research lineage](#research-lineage)). The work spans three connected lines:
+theoretical work on time and space as emergent from quantum information, indexed publicly from
+**April 2025** — a continuous line from that theory, through the algorithms it produced, into
+applied systems (see [Research lineage](#research-lineage), whose chronology is provisional
+pending a provenance reconstruction). The work spans three connected lines:
 (1) *relational quantum models* — mid-circuit measurement used as a source of
 conditional structure and emergent ordering (`qmnet`, `qhda-core`); (2) *verification-first
 scientific inference* — a pipeline that tests candidate relations against explicit null models
@@ -67,7 +68,7 @@ code) · **Spec** (design document only) · **Infrastructure** (publishing / too
 | [**qhda-coherence-bridge**](https://github.com/QHDALabs/qhda-coherence-bridge) | Earliest design note: abstraction layer between relational quantum models and executable substrates. | Spec | Design description only (~9 KB). Superseded in practice by `qhda-core`. |
 | [**qhdalabs.github.io**](https://github.com/QHDALabs/qhdalabs.github.io) | Research portal and papers index → [live](https://qhdalabs.github.io) | Infrastructure | Deployed site |
 | [**QHDALabs**](https://github.com/QHDALabs/QHDALabs) | This repository: profile, evidence documents, and the digital garden below. | Infrastructure | You are reading it |
-| [**Multiverse-Theory**](https://github.com/QHDALabs/Multiverse-Theory) | **Research origin (2025).** The theoretical work the lab grew out of: time from information asymmetry, space from quantum correlations, reality as a dynamic quantum graph. Self-fork of the operator's personal account, brought under QHDALabs in 2026-04. | Theory + simulations — predates the lab | ~40 concept/model documents in `docs/`, 6 Qiskit simulation scripts in `simulations/`, 3 preprint sources in `preprints/`, LaTeX build CI, `CITATION.cff` + `.zenodo.json`. See [lineage](#research-lineage) below. |
+| [**Multiverse-Theory**](https://github.com/QHDALabs/Multiverse-Theory) | **Research origin, earliest indexed 2025.** The theoretical work the lab grew out of: time from information asymmetry, space from quantum correlations, reality as a dynamic quantum graph. Self-fork of the operator's personal account, brought under QHDALabs in 2026-04. | Theory + simulations — predates the lab | ~40 concept/model documents in `docs/`, 6 Qiskit simulation scripts in `simulations/`, 3 preprint sources in `preprints/`, LaTeX build CI, `CITATION.cff` + `.zenodo.json`. See [lineage](#research-lineage) below. |
 
 Licenses differ per repository (this one and `qmnet` are MIT; Axon is RCSAL v2.0). Check each repo.
 
@@ -82,9 +83,19 @@ Per-component status and roadmap: **[docs/PROJECT_STATUS.md](./docs/PROJECT_STAT
 
 ## Research lineage
 
-The lab is not a standing start. The implemented components descend from theoretical work begun in
-**April 2025**, ten months before the QHDALabs account was created — a continuous line from
-theory, through algorithms, to applied systems. Every arrow below is traceable to files.
+The lab is not a standing start. The implemented components descend from theoretical work whose
+earliest **currently indexed** artifacts date to **April 2025**, ten months before the QHDALabs
+account was created — a continuous line from theory, through algorithms, to applied systems.
+Every arrow below is traceable to files.
+
+> **Provisional — this chronology is a working version.** April 2025 is the earliest origin
+> currently indexed in a public repository, not an established starting point. Earlier personal
+> research artifacts exist that may belong to the same lineage and may predate it. A dedicated
+> provenance reconstruction across the older archives is planned, to establish the earliest
+> *defensible* origin of each line from actual files, dates and technical continuity. Until then
+> this section deliberately neither shortens the history to 2025 nor claims older work that has
+> not yet been shown to be continuous with it. The lineage links below are unaffected — they are
+> file-to-file and stand on their own regardless of how far back the origin is ultimately dated.
 
 ```mermaid
 flowchart LR

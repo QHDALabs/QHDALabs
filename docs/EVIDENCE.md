@@ -30,7 +30,7 @@ Status vocabulary used throughout:
 | 12 public repositories | GitHub API `public_repos: 12` | `curl https://api.github.com/users/QHDALabs` | VERIFIED |
 | Active since 2026-02 | Account `created_at: 2026-02-25` | same | VERIFIED |
 | Single operator, no institutional affiliation | Account type `User`; all repos owned by one account; no org members | GitHub UI / API | VERIFIED |
-| Research activity predates the QHDALabs account by ~10 months | Earliest `Multiverse-Theory` commit 2025-04-17; account created 2026-02-25 | `curl .../repos/QHDALabs/Multiverse-Theory/commits` | VERIFIED |
+| Research activity predates the QHDALabs account by at least ~10 months | Earliest `Multiverse-Theory` commit 2025-04-17; account created 2026-02-25 | `curl .../repos/QHDALabs/Multiverse-Theory/commits` | VERIFIED (as a **lower bound** — see the provenance note in §7a; earlier unindexed artifacts may exist) |
 | `Multiverse-Theory` is a **self-fork**, not a fork of a third party — parent is the operator's own personal account `krzyshtoof/Multiverse-Theory`, and all 20 commits are the operator's across both accounts | API `fork: true`, `parent.full_name: krzyshtoof/Multiverse-Theory`; commit authors are `Krzysztof W. Banasiewicz` / `krzysztof` / `krzyshtoof` | `curl .../repos/QHDALabs/Multiverse-Theory` and `.../commits`; compare author identities | VERIFIED |
 | Additional private repositories exist | — | Not inspectable by definition | NOT VERIFIABLE — **no claims are made about them and nothing in the public presentation depends on them** |
 | Any aggregate statistic spanning private repos (total commits, total code volume, language shares) | — | — | NOT VERIFIABLE — **such figures have been removed from the public presentation** |
@@ -151,8 +151,18 @@ section 7a below.)*
 
 ## 7a. Multiverse-Theory — research origin and algorithmic lineage
 
-Repo: <https://github.com/QHDALabs/Multiverse-Theory> · original work 2025-04 → 2025-09, brought
+Repo: <https://github.com/QHDALabs/Multiverse-Theory> · indexed work 2025-04 → 2025-09, brought
 under QHDALabs 2026-04.
+
+> **Provenance status: provisional.** The 2025-04 date is the earliest artifact *currently indexed
+> in a public repository*, and should be read as a **lower bound on the research history, not as
+> its origin**. Earlier personal research artifacts exist that may belong to the same lineage; a
+> dedicated provenance reconstruction across the older archives is planned to establish the
+> earliest defensible origin of each line from actual files, dates and technical continuity. This
+> document deliberately does not claim that older material as QHDALabs work until that continuity
+> is shown, and equally does not assert 2025-04 as a starting point. **The lineage rows below are
+> unaffected** — they are file-to-file relationships and hold regardless of how far back the
+> origin is ultimately dated.
 
 This is where the lab's ideas come from. It is offered as **provenance for the algorithms, not as
 validation of them** — the claims that carry weight are in the implemented components in sections
@@ -160,7 +170,8 @@ validation of them** — the claims that carry weight are in the implemented com
 
 | Capability / claim | Repository evidence | Verification method | Status |
 |---|---|---|---|
-| Theoretical work predates the lab by ~10 months | Earliest commit 2025-04-17; QHDALabs account created 2026-02-25 | Compare commit dates to account `created_at` | VERIFIED |
+| Theoretical work predates the lab by at least ~10 months | Earliest commit 2025-04-17; QHDALabs account created 2026-02-25 | Compare commit dates to account `created_at` | VERIFIED as a lower bound |
+| 2025-04 is the definitive origin of the research | — | Not established; earlier unindexed artifacts are under review | **NOT CLAIMED — provisional, see note above** |
 | Self-fork of the operator's own account, not third-party work | `parent.full_name: krzyshtoof/Multiverse-Theory`; all 20 commits authored by the operator across both accounts | `curl .../commits` and compare author identities | VERIFIED |
 | Substantial theoretical corpus, not a placeholder | ~40 documents under `docs/` — `models/` (emergent time, decoherence, formalism, topological entanglement, gravity), `concepts/` (virtual qubit, ψ-connection, atemporal quantum space), `predictions/`, `assumptions/` | Read the tree | VERIFIED |
 | Contains executable simulations, not only prose (GitHub labels the repo TeX by byte count, which understates this) | `simulations/qqc.py`, `time_shifted_clock.py`, `time_shift_clock.py`, `virtual_quantum.py`, `wodor.py`, `wodor2.py` (Qiskit / NumPy) | Read and run | PARTIALLY VERIFIED — runnable, but no test suite and no published result set |

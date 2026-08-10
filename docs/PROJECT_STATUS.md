@@ -137,11 +137,18 @@ h0lab, reltime, cosmohub) and a technology stack. No implementations, datasets o
 Currently an intent statement. XSIG is the one line from this umbrella that produced actual work,
 and it lives in its own repository.
 
-### Multiverse-Theory — research origin (2025)
+### Multiverse-Theory — research origin (earliest indexed 2025)
 
-The theoretical work the lab grew out of, begun **April 2025** — ten months before the QHDALabs
-account existed — and brought under the organisation in April 2026. A self-fork of the operator's
-personal account; all commits are his own across both accounts.
+The theoretical work the lab grew out of. Its earliest **currently indexed** artifacts date to
+**April 2025** — ten months before the QHDALabs account existed — and the repository was brought
+under the organisation in April 2026. A self-fork of the operator's personal account; all commits
+are his own across both accounts.
+
+> **Chronology is provisional.** 2025-04 is a lower bound, not an established origin. Earlier
+> personal research artifacts exist that may belong to the same lineage; a provenance
+> reconstruction across the older archives is planned to fix the earliest defensible date for each
+> line from files, dates and technical continuity. Neither shortening the history to 2025 nor
+> claiming older unrelated work is acceptable, so this stays provisional until that is done.
 
 Proposes that time emerges from information asymmetry, space from quantum correlations, and
 causality from stable relational structure, with reality modelled as a dynamic quantum graph.
@@ -187,7 +194,11 @@ Nothing below exists. Listed for direction, in rough priority order.
 5. **XSIG:** extend beyond 16 observational windows; replace parametric BAO with raw data.
 6. **RTANA:** turn the manifesto into an architecture proposal plus a falsifiable evaluation
    protocol before writing any code.
-7. **Cross-cutting:** external replication of at least one result by someone other than the author.
+7. **Research provenance reconstruction:** establish the earliest defensible origin of each
+   lineage from the older personal archives (RPi4 archive and other historical research/code
+   artifacts), driven by files, dates and technical continuity — then replace the provisional
+   2025-04 chronology in the README and in `EVIDENCE.md` §7a with the reconstructed one.
+8. **Cross-cutting:** external replication of at least one result by someone other than the author.
 
 ---
 
