@@ -33,7 +33,7 @@
 root@qhdalabs:~$ whoami --verbose
 
   operator ......... Krzysztof Banasiewicz
-  entity ........... QHDALabs — Strategic Futures Lab (independent deep-tech)
+  entity ........... QHDALabs — Civilization Systems Intelligence Lab (independent deep-tech)
   location ......... Poland  ·  EU  ·  Global
   domains .......... quantum systems · applied AI · critical infrastructure · frontier science
   method ........... relation as the unit  ·  verification before discovery
