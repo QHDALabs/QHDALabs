@@ -2,21 +2,26 @@
 
 <img src="https://raw.githubusercontent.com/QHDALabs/QHDALabs/main/assets/qhda-banner.svg" alt="QHDALabs — Strategic AI, Quantum Systems &amp; Civilizational Infrastructure" width="100%" />
 
-<a href="https://qhdalabs.com">
-  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=21&pause=1000&color=00FF41&center=true&vCenter=true&width=880&height=42&lines=Wake+up...+the+lab+is+real.;There+is+no+spoon+%E2%80%94+only+the+state+vector.;Relation+is+the+unit.+Verification+before+discovery.;Form+is+emptiness.+Emptiness+compiles.;21+nodes+%C2%B7+349+commits+%C2%B7+one+long-horizon+mission." alt="Typing SVG" />
-</a>
+<div align="center">
+  <p>
+    <strong>Wake up... the lab is real.</strong><br/>
+    <strong>There is no spoon — only the state vector.</strong><br/>
+    <strong>Relation is the unit. Verification before discovery.</strong><br/>
+    <strong>Form is emptiness. Emptiness compiles.</strong>
+  </p>
+</div>
 
-<br/>
-
-<img src="https://komarev.com/ghpvc/?username=QHDALabs&style=for-the-badge&color=00ff41&label=SIGNAL+TRACES" alt="Visitors" />
-<img src="https://img.shields.io/github/followers/QHDALabs?style=for-the-badge&logo=github&label=OPERATORS&labelColor=0d1117&color=00ff41" alt="Followers" />
-<img src="https://img.shields.io/badge/NODES-21-00ff41?style=for-the-badge&labelColor=0d1117&logo=databricks&logoColor=00ff41" alt="Nodes" />
-<img src="https://img.shields.io/badge/COMMITS-349-00ff41?style=for-the-badge&labelColor=0d1117&logo=git&logoColor=00ff41" alt="Commits" />
-<br/>
-<img src="https://img.shields.io/badge/status-building%20the%20future-00ff41?style=for-the-badge&labelColor=0d1117&logo=rocket&logoColor=00ff41" alt="Status" />
-<img src="https://img.shields.io/badge/phase-01%20%C2%B7%20foundation-FFE9A8?style=for-the-badge&labelColor=0d1117&logo=target&logoColor=FFE9A8" alt="Phase" />
-<img src="https://img.shields.io/badge/base-Poland%20%7C%20EU%20%7C%20Global-00C8A0?style=for-the-badge&labelColor=0d1117&logo=europeanunion&logoColor=00C8A0" alt="Base" />
-<img src="https://img.shields.io/badge/mode-deep%20work-8CF7B0?style=for-the-badge&labelColor=0d1117&logo=zenn&logoColor=8CF7B0" alt="Mode" />
+<div align="center">
+  <img src="https://img.shields.io/badge/Signal%20traces-live-00FF41?style=for-the-badge&labelColor=0D1117" alt="Signal traces" />
+  <img src="https://img.shields.io/github/followers/QHDALabs?style=for-the-badge&logo=github&label=OPERATORS&labelColor=0d1117&color=00ff41" alt="Followers" />
+  <img src="https://img.shields.io/badge/NODES-21-00ff41?style=for-the-badge&labelColor=0d1117&logo=databricks&logoColor=00ff41" alt="Nodes" />
+  <img src="https://img.shields.io/badge/COMMITS-349-00ff41?style=for-the-badge&labelColor=0d1117&logo=git&logoColor=00ff41" alt="Commits" />
+  <br/>
+  <img src="https://img.shields.io/badge/status-building%20the%20future-00ff41?style=for-the-badge&labelColor=0d1117&logo=rocket&logoColor=00ff41" alt="Status" />
+  <img src="https://img.shields.io/badge/phase-01%20%C2%B7%20foundation-FFE9A8?style=for-the-badge&labelColor=0d1117&logo=target&logoColor=FFE9A8" alt="Phase" />
+  <img src="https://img.shields.io/badge/base-Poland%20%7C%20EU%20%7C%20Global-00C8A0?style=for-the-badge&labelColor=0d1117&logo=europeanunion&logoColor=00C8A0" alt="Base" />
+  <img src="https://img.shields.io/badge/mode-deep%20work-8CF7B0?style=for-the-badge&labelColor=0d1117&logo=zenn&logoColor=8CF7B0" alt="Mode" />
+</div>
 
 <img src="https://raw.githubusercontent.com/QHDALabs/QHDALabs/main/assets/qhda-divider.svg" alt="" width="100%" />
 
@@ -234,17 +239,26 @@ NODE GENESIS — first five months
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=python,anaconda,pytorch,tensorflow,flask,fastapi,js,html,css,latex,powershell,bash,git,github,githubactions,docker,linux,vscode,markdown,sqlite&perline=10" alt="Tech stack" />
-
-<br/><br/>
-
-![Qiskit](https://img.shields.io/badge/Qiskit-quantum%20circuits-6929C4?style=for-the-badge&labelColor=0d1117&logo=qiskit&logoColor=00ff41)
-![NumPy](https://img.shields.io/badge/NumPy-numerics-013243?style=for-the-badge&labelColor=0d1117&logo=numpy&logoColor=00ff41)
-![SciPy](https://img.shields.io/badge/SciPy-simulation-8CAAE6?style=for-the-badge&labelColor=0d1117&logo=scipy&logoColor=00ff41)
-![Pandas](https://img.shields.io/badge/pandas-data-150458?style=for-the-badge&labelColor=0d1117&logo=pandas&logoColor=00ff41)
-![NetworkX](https://img.shields.io/badge/NetworkX-graphs-2C5BB4?style=for-the-badge&labelColor=0d1117&logo=graphql&logoColor=00ff41)
-![Pages](https://img.shields.io/badge/GitHub%20Pages-publishing-222222?style=for-the-badge&labelColor=0d1117&logo=githubpages&logoColor=00ff41)
-![ISO27001](https://img.shields.io/badge/ISO%2027001-security-EF3B2D?style=for-the-badge&labelColor=0d1117&logo=shieldsdotio&logoColor=00ff41)
+<img src="https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+<img src="https://img.shields.io/badge/Qiskit-1.x-6929C4?style=for-the-badge&logo=qiskit&logoColor=white" alt="Qiskit" />
+<img src="https://img.shields.io/badge/NumPy-2.x-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
+<img src="https://img.shields.io/badge/SciPy-1.x-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white" alt="SciPy" />
+<img src="https://img.shields.io/badge/pandas-2.x-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" />
+<img src="https://img.shields.io/badge/NetworkX-graph-2C5BB4?style=for-the-badge&logo=networkx&logoColor=white" alt="NetworkX" />
+<img src="https://img.shields.io/badge/GeoPandas-maps-7A7A7A?style=for-the-badge&logo=geojson&logoColor=white" alt="GeoPandas" />
+<img src="https://img.shields.io/badge/SHAP-explainability-4C9E63?style=for-the-badge&logo=python&logoColor=white" alt="SHAP" />
+<img src="https://img.shields.io/badge/React-frontend-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
+<img src="https://img.shields.io/badge/JavaScript-ES2024-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+<img src="https://img.shields.io/badge/HTML5-website-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+<img src="https://img.shields.io/badge/CSS3-design-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+<img src="https://img.shields.io/badge/LaTeX-paper-008080?style=for-the-badge&logo=latex&logoColor=white" alt="LaTeX" />
+<img src="https://img.shields.io/badge/GitHub%20Actions-CI-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
+<img src="https://img.shields.io/badge/Docker-containers-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+<img src="https://img.shields.io/badge/Linux-systems-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
+<img src="https://img.shields.io/badge/PostgreSQL-data-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+<img src="https://img.shields.io/badge/SQLite-local-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
+<img src="https://img.shields.io/badge/GitHub%20Pages-publishing-222222?style=for-the-badge&logo=githubpages&logoColor=white" alt="GitHub Pages" />
+<img src="https://img.shields.io/badge/ISO%2027001-security-EF3B2D?style=for-the-badge&logo=security&logoColor=white" alt="ISO 27001" />
 
 </div>
 
