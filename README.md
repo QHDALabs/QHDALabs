@@ -218,10 +218,13 @@ NODE GENESIS — first five months
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=QHDALabs&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=00FF41&icon_color=FFE9A8&text_color=8CF7B0&ring_color=00FF41" alt="GitHub stats" height="170" />
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=QHDALabs&hide_border=true&background=0D1117&stroke=00FF41&ring=00FF41&fire=FFE9A8&currStreakNum=EAFFF1&sideNums=EAFFF1&currStreakLabel=00FF41&sideLabels=8CF7B0&dates=4C9E63" alt="Streak" height="170" />
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=QHDALabs&bg_color=0D1117&color=8CF7B0&title_color=00FF41&line=00FF41&point=FFE9A8&area=true&area_color=00FF41&hide_border=true" alt="Activity graph" width="100%" />
+<img src="https://img.shields.io/badge/Public%20repos-12-00FF41?style=for-the-badge&labelColor=0D1117&logo=github" alt="Public repositories" />
+<img src="https://img.shields.io/badge/Commits-349-00FF41?style=for-the-badge&labelColor=0D1117&logo=git" alt="Commits" />
+<img src="https://img.shields.io/badge/Nodes-21-FFE9A8?style=for-the-badge&labelColor=0D1117&logo=databricks" alt="Nodes" />
+<br/>
+<img src="https://img.shields.io/badge/Status-active%20research-00FF41?style=for-the-badge&labelColor=0D1117&logo=rocket" alt="Status" />
+<img src="https://img.shields.io/badge/Origin-2025--04-00C8A0?style=for-the-badge&labelColor=0D1117" alt="Origin" />
+<img src="https://img.shields.io/badge/Verification-first-yes-8CF7B0?style=for-the-badge&labelColor=0D1117" alt="Verification first" />
 
 </div>
 
