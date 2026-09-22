@@ -11,7 +11,7 @@ scientific-literature inference, and applied environmental risk — with negativ
 alongside positive ones.**
 
 Operator: Krzysztof W. Banasiewicz · Poland / EU · research indexed from 2025-04, public
-repositories since 2026-02 · <qhdalabs.contact@gmail.com>
+repositories since 2026-02 · <contact@qhdalabs.com>
 
 ---
 
