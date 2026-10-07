@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/QHDALabs/QHDALabs/main/assets/qhda-banner.svg" alt="QHDALabs — Strategic AI, Quantum Systems &amp; Civilizational Infrastructure" width="100%" />
+<img src="https://raw.githubusercontent.com/QHDALabs/QHDALabs/main/assets/qhda-banner.svg" alt="QHDALabs Civilization Systems Intelligence Lab" width="100%" />
 
 <div align="center">
   <p>
